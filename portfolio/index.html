@@ -12,17 +12,10 @@
 <body>
   <div class="noise" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="header-dots" aria-hidden="true">
-      <span class="dot outline"></span>
-      <span class="dot solid"></span>
-    </div>
-  </header>
-
   <nav class="section-nav" aria-label="セクション">
     <a href="#hero" class="nav-dot active" data-index="0" aria-label="トップ"></a>
     <a href="#identity" class="nav-dot" data-index="1" aria-label="アイデンティティ"></a>
-    <a href="#reasons" class="nav-dot" data-index="2" aria-label="選ぶ理由"></a>
+    <a href="#reasons" class="nav-dot" data-index="2" aria-label="選んでもらう理由"></a>
     <a href="#contents" class="nav-dot" data-index="3" aria-label="デジタルコンテンツ"></a>
     <a href="#service" class="nav-dot" data-index="4" aria-label="サービス"></a>
     <a href="#workflow" class="nav-dot" data-index="5" aria-label="ワークフロー"></a>
@@ -35,9 +28,6 @@
     <button type="button" class="scroll-btn" id="scroll-down" aria-label="下へスクロール">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
     </button>
-    <div class="fab-pill" aria-hidden="true">
-      <span class="sparkle">✦</span>
-    </div>
   </div>
 
   <main>
@@ -82,7 +72,7 @@
     <section id="reasons" class="section reasons">
       <div class="glass-card reasons-card">
         <div class="reasons-text">
-          <h2 class="section-title-gold">私を選ぶ理由</h2>
+          <h2 class="section-title-gold">私を選んでもらう理由</h2>
           <p class="body-text">単なる制作ではなく、「ビジネスの課題解決」を目的としたデザインを提供します。</p>
           <p class="body-text">スピード感と円滑なコミュニケーションで、プロジェクトを成功に導きます。</p>
         </div>
@@ -287,6 +277,7 @@
       var sections = document.querySelectorAll("main .section");
       var dots = document.querySelectorAll(".nav-dot");
       function setActive() {
+        if (!dots.length) return;
         var mid = window.innerHeight / 2;
         var idx = 0;
         sections.forEach(function (s, i) {

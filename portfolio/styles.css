@@ -12,7 +12,6 @@
   --font-jp: "Noto Sans JP", sans-serif;
   --font-en: "Montserrat", sans-serif;
   --radius: 16px;
-  --header-h: 56px;
 }
 
 *,
@@ -46,51 +45,11 @@ body {
 }
 
 main,
-.site-header,
 .site-footer,
 .section-nav,
 .scroll-controls {
   position: relative;
   z-index: 1;
-}
-
-/* Header */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--header-h);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 1.25rem 0 1.5rem;
-  pointer-events: none;
-}
-
-.site-header > * {
-  pointer-events: auto;
-}
-
-.header-dots {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.header-dots .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.header-dots .outline {
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
-}
-
-.header-dots .solid {
-  background: #fff;
 }
 
 /* Side nav */
@@ -160,27 +119,10 @@ main,
   height: 18px;
 }
 
-.fab-pill {
-  width: 28px;
-  height: 56px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4px;
-}
-
-.sparkle {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 /* Sections */
 .section {
   min-height: 100vh;
-  padding-top: calc(var(--header-h) + 2rem);
+  padding-top: max(2.5rem, env(safe-area-inset-top, 0px));
   padding-bottom: 4rem;
   padding-left: max(1.25rem, env(safe-area-inset-left));
   padding-right: max(2rem, env(safe-area-inset-right));

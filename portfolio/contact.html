@@ -13,18 +13,11 @@
 <body>
   <div class="noise" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="header-dots" aria-hidden="true">
-      <span class="dot outline"></span>
-      <span class="dot solid"></span>
-    </div>
-  </header>
-
   <main class="contact-page">
     <a class="contact-back" href="index.html#workflow">← トップに戻る</a>
 
     <div class="contact-brand">
-      <img src="images/clean-smile-logo.png" width="160" height="160" alt="企業ロゴ制作の実例（CLEAN SMILE）" loading="lazy" decoding="async" />
+      <img src="images/kohyama-dri-logo.png" width="200" height="120" alt="KOHYAMA DIGITAL RESEARCH INSTITUTE ロゴ" loading="lazy" decoding="async" />
       <div class="contact-brand-text">
         <p class="contact-owner-name">神山 裕貴</p>
         <p class="contact-owner-role">Portfolio · お問い合わせ</p>
@@ -62,22 +55,6 @@
           <option value="ホームページ作成">ホームページ作成</option>
           <option value="企業ロゴ・ブランディング">企業ロゴ・ブランディング</option>
           <option value="その他">その他</option>
-        </select>
-        <p class="contact-error" role="alert">選択してください。</p>
-      </div>
-      <div class="contact-field" data-field="area">
-        <label class="contact-label" for="f-area">施工希望エリア <span class="req" aria-hidden="true">*</span></label>
-        <select class="contact-select" id="f-area" name="area" required>
-          <option value="">エリアを選択</option>
-          <option value="オンラインのみ">オンラインのみ</option>
-          <option value="関東">関東</option>
-          <option value="関西">関西</option>
-          <option value="中部">中部</option>
-          <option value="中国・四国">中国・四国</option>
-          <option value="九州・沖縄">九州・沖縄</option>
-          <option value="北海道・東北">北海道・東北</option>
-          <option value="全国">全国</option>
-          <option value="相談して決めたい">相談して決めたい</option>
         </select>
         <p class="contact-error" role="alert">選択してください。</p>
       </div>
@@ -132,7 +109,6 @@
         var phone = document.getElementById("f-phone").value.trim();
         var email = document.getElementById("f-email").value.trim();
         var service = document.getElementById("f-service").value;
-        var area = document.getElementById("f-area").value;
         var body = document.getElementById("f-body").value.trim();
 
         var ok = true;
@@ -146,10 +122,6 @@
         }
         if (!service) {
           showError("service");
-          ok = false;
-        }
-        if (!area) {
-          showError("area");
           ok = false;
         }
         if (!ok) return;
@@ -167,9 +139,6 @@
           "\r\n" +
           "ご希望のサービス: " +
           service +
-          "\r\n" +
-          "施工希望エリア: " +
-          area +
           "\r\n\r\n" +
           "ご相談内容・ご要望:\r\n" +
           (body || "（なし）") +
