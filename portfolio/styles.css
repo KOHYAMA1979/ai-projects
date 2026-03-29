@@ -63,7 +63,7 @@ main,
   height: var(--header-h);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 1.25rem 0 1.5rem;
   pointer-events: none;
 }
@@ -91,36 +91,6 @@ main,
 
 .header-dots .solid {
   background: #fff;
-}
-
-.header-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.doc-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  font-family: var(--font-en);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--gold);
-  text-decoration: none;
-  border: 1px solid var(--border-gold);
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.doc-btn:hover {
-  background: rgba(232, 197, 71, 0.12);
-}
-
-.icon-doc {
-  width: 14px;
-  height: 14px;
 }
 
 /* Side nav */
