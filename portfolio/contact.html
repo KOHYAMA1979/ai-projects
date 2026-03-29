@@ -50,13 +50,9 @@
         <select class="contact-select" id="f-service" name="service" required>
           <option value="">サービスを選択</option>
           <option value="画像生成">画像生成</option>
-          <option value="LINEスタンプ作成">LINEスタンプ作成</option>
           <option value="AIライティング">AIライティング</option>
           <option value="スライド資料作成">スライド資料作成</option>
-          <option value="LP作成">LP作成</option>
-          <option value="サイト作成">サイト作成</option>
           <option value="ホームページ作成">ホームページ作成</option>
-          <option value="チャットボット作成">チャットボット作成</option>
           <option value="企業ロゴ・ブランディング">企業ロゴ・ブランディング</option>
           <option value="その他">その他</option>
         </select>
@@ -68,7 +64,7 @@
           class="contact-textarea"
           id="f-body"
           name="body"
-          placeholder="例：ご希望サービスを選択後、目的・ターゲット・ご希望納期をご記入ください。"
+          placeholder="例：リビングのエアコン1台の分解洗浄をお願いしたい。カビ臭がひどい状態です。"
         ></textarea>
       </div>
       <div class="contact-submit-wrap">
@@ -93,28 +89,6 @@
     (function () {
       var form = document.getElementById("estimate-form");
       var to = "info@digital2026.net";
-      var serviceSelect = document.getElementById("f-service");
-      var bodyField = document.getElementById("f-body");
-
-      var bodyPlaceholderByService = {
-        "": "例：ご希望サービスを選択後、目的・ターゲット・ご希望納期をご記入ください。",
-        "画像生成": "例：画像生成をお願いしたいです。SNS投稿用に3案ほしいです。ターゲットは20〜30代女性で、納期は今月末希望です。",
-        "LINEスタンプ作成": "例：LINEスタンプ作成をお願いしたいです。日常で使える40個セットを希望しています。親しみやすいテイストで相談したいです。",
-        "AIライティング": "例：AIライティングをお願いしたいです。サービス紹介記事を月4本作成したく、SEOを意識した構成から相談したいです。",
-        "スライド資料作成": "例：スライド資料作成をお願いしたいです。営業提案用で10〜15枚程度を想定しており、伝わりやすい構成にしたいです。",
-        "LP作成": "例：LP作成をお願いしたいです。新サービスの申込み数を増やしたく、構成提案からデザイン・実装まで相談したいです。",
-        "サイト作成": "例：サイト作成をお願いしたいです。目的はお問い合わせ数の増加で、ターゲットに合わせた構成提案・デザイン・実装まで一貫して相談したいです。",
-        "ホームページ作成": "例：ホームページ作成をお願いしたいです。会社案内と実績を掲載し、信頼感が伝わるデザインで制作したいです。",
-        "チャットボット作成": "例：チャットボット作成をお願いしたいです。よくある質問対応を自動化し、問い合わせ対応の負担を減らしたいです。",
-        "企業ロゴ・ブランディング": "例：企業ロゴ・ブランディングをお願いしたいです。事業の強みが伝わるロゴと、名刺やWebで使える展開案を相談したいです。",
-        "その他": "例：ご相談したい内容をご記入ください。目的・現状の課題・ご希望納期を共有いただけるとスムーズです。"
-      };
-
-      function updateBodyPlaceholder() {
-        var service = serviceSelect.value;
-        var next = bodyPlaceholderByService[service] || bodyPlaceholderByService[""];
-        bodyField.setAttribute("placeholder", next);
-      }
 
       function clearErrors() {
         form.querySelectorAll(".contact-field.has-error").forEach(function (el) {
@@ -126,9 +100,6 @@
         var wrap = form.querySelector('.contact-field[data-field="' + fieldName + '"]');
         if (wrap) wrap.classList.add("has-error");
       }
-
-      serviceSelect.addEventListener("change", updateBodyPlaceholder);
-      updateBodyPlaceholder();
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
