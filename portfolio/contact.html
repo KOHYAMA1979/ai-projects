@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ — 無料見積もり | 神山 裕貴</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-dots" aria-hidden="true">
+      <span class="dot outline"></span>
+      <span class="dot solid"></span>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <a class="contact-back" href="index.html#workflow">← トップに戻る</a>
+
+    <div class="contact-brand">
+      <img src="images/clean-smile-logo.png" width="160" height="160" alt="企業ロゴ制作の実例（CLEAN SMILE）" loading="lazy" decoding="async" />
+      <div class="contact-brand-text">
+        <p class="contact-owner-name">神山 裕貴</p>
+        <p class="contact-owner-role">Portfolio · お問い合わせ</p>
+      </div>
+    </div>
+
+    <p class="contact-eyebrow">CONTACT</p>
+    <h1 class="contact-title">無料見積もりのご依頼</h1>
+    <p class="contact-lead">
+      フォームに必要事項を入力して送信してください。24時間以内にご連絡いたします。
+    </p>
+
+    <form class="contact-form-card" id="estimate-form" novalidate>
+      <div class="contact-field" data-field="name">
+        <label class="contact-label" for="f-name">お名前 <span class="req" aria-hidden="true">*</span></label>
+        <input class="contact-input" type="text" id="f-name" name="name" autocomplete="name" placeholder="山田 太郎" required />
+        <p class="contact-error" role="alert">入力してください。</p>
+      </div>
+      <div class="contact-field" data-field="phone">
+        <label class="contact-label" for="f-phone">お電話番号 <span class="req" aria-hidden="true">*</span></label>
+        <input class="contact-input" type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="090-xxxx-xxxx" required />
+        <p class="contact-error" role="alert">入力してください。</p>
+      </div>
+      <div class="contact-field">
+        <label class="contact-label" for="f-email">メールアドレス</label>
+        <input class="contact-input" type="email" id="f-email" name="email" autocomplete="email" inputmode="email" placeholder="example@email.com" />
+      </div>
+      <div class="contact-field" data-field="service">
+        <label class="contact-label" for="f-service">ご希望のサービス <span class="req" aria-hidden="true">*</span></label>
+        <select class="contact-select" id="f-service" name="service" required>
+          <option value="">サービスを選択</option>
+          <option value="画像生成">画像生成</option>
+          <option value="AIライティング">AIライティング</option>
+          <option value="スライド資料作成">スライド資料作成</option>
+          <option value="ホームページ作成">ホームページ作成</option>
+          <option value="企業ロゴ・ブランディング">企業ロゴ・ブランディング</option>
+          <option value="その他">その他</option>
+        </select>
+        <p class="contact-error" role="alert">選択してください。</p>
+      </div>
+      <div class="contact-field" data-field="area">
+        <label class="contact-label" for="f-area">施工希望エリア <span class="req" aria-hidden="true">*</span></label>
+        <select class="contact-select" id="f-area" name="area" required>
+          <option value="">エリアを選択</option>
+          <option value="オンラインのみ">オンラインのみ</option>
+          <option value="関東">関東</option>
+          <option value="関西">関西</option>
+          <option value="中部">中部</option>
+          <option value="中国・四国">中国・四国</option>
+          <option value="九州・沖縄">九州・沖縄</option>
+          <option value="北海道・東北">北海道・東北</option>
+          <option value="全国">全国</option>
+          <option value="相談して決めたい">相談して決めたい</option>
+        </select>
+        <p class="contact-error" role="alert">選択してください。</p>
+      </div>
+      <div class="contact-field">
+        <label class="contact-label" for="f-body">ご相談内容・ご要望</label>
+        <textarea
+          class="contact-textarea"
+          id="f-body"
+          name="body"
+          placeholder="例：リビングのエアコン1台の分解洗浄をお願いしたい。カビ臭がひどい状態です。"
+        ></textarea>
+      </div>
+      <div class="contact-submit-wrap">
+        <button type="submit" class="contact-submit">無料見積もりを送信する →</button>
+      </div>
+      <p class="contact-footnote">
+        ※ 送信後24時間以内にご連絡いたします。<br />
+        土日祝も受付・対応しております。
+      </p>
+    </form>
+
+    <p class="contact-mail-note">
+      返信先メール：<a href="mailto:info@digital2026.net">info@digital2026.net</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 神山 裕貴</p>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("estimate-form");
+      var to = "info@digital2026.net";
+
+      function clearErrors() {
+        form.querySelectorAll(".contact-field.has-error").forEach(function (el) {
+          el.classList.remove("has-error");
+        });
+      }
+
+      function showError(fieldName) {
+        var wrap = form.querySelector('.contact-field[data-field="' + fieldName + '"]');
+        if (wrap) wrap.classList.add("has-error");
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        clearErrors();
+
+        var name = document.getElementById("f-name").value.trim();
+        var phone = document.getElementById("f-phone").value.trim();
+        var email = document.getElementById("f-email").value.trim();
+        var service = document.getElementById("f-service").value;
+        var area = document.getElementById("f-area").value;
+        var body = document.getElementById("f-body").value.trim();
+
+        var ok = true;
+        if (!name) {
+          showError("name");
+          ok = false;
+        }
+        if (!phone) {
+          showError("phone");
+          ok = false;
+        }
+        if (!service) {
+          showError("service");
+          ok = false;
+        }
+        if (!area) {
+          showError("area");
+          ok = false;
+        }
+        if (!ok) return;
+
+        var text =
+          "【無料見積もりのご依頼】\r\n\r\n" +
+          "お名前: " +
+          name +
+          "\r\n" +
+          "お電話番号: " +
+          phone +
+          "\r\n" +
+          "メールアドレス: " +
+          (email || "（未入力）") +
+          "\r\n" +
+          "ご希望のサービス: " +
+          service +
+          "\r\n" +
+          "施工希望エリア: " +
+          area +
+          "\r\n\r\n" +
+          "ご相談内容・ご要望:\r\n" +
+          (body || "（なし）") +
+          "\r\n";
+
+        var subject = encodeURIComponent("無料見積もりのご依頼");
+        var bodyEnc = encodeURIComponent(text);
+        window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + bodyEnc;
+      });
+    })();
+  </script>
+</body>
+</html>
