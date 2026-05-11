@@ -760,6 +760,11 @@ main,
     height: 8px;
   }
 
+  .section-headline {
+    font-size: clamp(1.22rem, 6.1vw, 1.6rem);
+    line-height: 1.4;
+  }
+
   .scroll-controls {
     bottom: 1rem;
     right: 0.6rem;
