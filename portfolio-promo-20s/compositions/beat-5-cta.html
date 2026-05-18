@@ -1,0 +1,29 @@
+<template id="beat-5-cta-template">
+  <div id="beat-5-cta" data-composition-id="beat-5-cta" data-start="0" data-duration="4" data-width="1920" data-height="1080">
+    <div class="hero-wrap"><img class="hero" src="../capture/assets/hero-pc.png" alt="" /></div>
+    <div class="veil"></div>
+    <div class="hero-message">AIを、個人事業主と中小企業の<strong>味方に。</strong></div>
+    <style>
+      @font-face { font-family: MontserratLocal; src: url("../capture/assets/fonts/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf"); }
+      @font-face { font-family: NotoSerifJPLocal; src: url("../capture/assets/fonts/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzWPebA.ttf"); }
+      @font-face { font-family: NotoSansJPLocal; src: url("../capture/assets/fonts/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFM8k75s.ttf"); }
+      #beat-5-cta { position: relative; width: 100%; height: 100%; overflow: hidden; color: #F4F6FB; background: #080B14; }
+      .hero-wrap, .veil { position: absolute; inset: 0; }
+      .hero { width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; }
+      .veil { background: rgba(8,11,20,0.16); box-shadow: inset 0 0 180px #080B14; }
+      .hero-message { position: absolute; z-index: 3; right: 72px; bottom: 185px; width: 1480px; color: #F8FAFF; font-family: NotoSerifJPLocal, serif; font-size: 70px; font-weight: 700; line-height: 1.28; letter-spacing: 0; white-space: nowrap; text-align: right; text-shadow: 0 8px 28px rgba(0,0,0,0.72), 0 0 26px rgba(45,134,255,0.5); }
+      .hero-message::before { content: ""; display: block; width: 220px; height: 3px; margin-bottom: 26px; background: linear-gradient(90deg, #E8C547, rgba(232,197,71,0)); box-shadow: 0 0 20px rgba(232,197,71,0.75); }
+      .hero-message::before { margin-left: auto; }
+      .hero-message strong { color: #E8C547; font-size: 80px; font-weight: 800; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set(".hero-message", { opacity: 0, y: 42, scale: 0.985 }, 0);
+      tl.fromTo(".hero-wrap", { scale: 1.02 }, { scale: 1.03, duration: 4, ease: "none" }, 0);
+      tl.to(".hero-message", { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power2.out" }, 0.35);
+      window.__timelines["beat-5-cta"] = tl;
+    </script>
+  </div>
+</template>

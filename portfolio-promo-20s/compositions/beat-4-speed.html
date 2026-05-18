@@ -1,0 +1,41 @@
+<template id="beat-4-speed-template">
+  <div id="beat-4-speed" data-composition-id="beat-4-speed" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+    <div class="content">
+      <p class="label">SERVICE & POLICY</p>
+      <h2>速さと安心を、<span>最初から。</span></h2>
+      <div class="proofs">
+        <div class="tile"><img src="../capture/assets/svgs/tick.svg?tile=1" alt="" /><strong>最短翌日</strong><small>納品対応</small></div>
+        <div class="tile"><img src="../capture/assets/svgs/tick.svg?tile=2" alt="" /><strong>24時間以内</strong><small>原則返信</small></div>
+      </div>
+      <div class="support">
+        <div><img src="../capture/assets/svgs/step-icon.svg?chip=1" alt="" />集客導線まで設計</div>
+        <div><img src="../capture/assets/svgs/step-icon.svg?chip=2" alt="" />専門用語をかみ砕いて説明</div>
+      </div>
+    </div>
+    <style>
+      @font-face { font-family: MontserratLocal; src: url("../capture/assets/fonts/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf"); }
+      @font-face { font-family: NotoSansJPLocal; src: url("../capture/assets/fonts/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFM8k75s.ttf"); }
+      #beat-4-speed { position: relative; width: 100%; height: 100%; overflow: hidden; color: #F4F6FB; background: #0A0E1A; font-family: NotoSansJPLocal, sans-serif; }
+      #beat-4-speed::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 42px, rgba(232,197,71,0.05) 43px), radial-gradient(circle at 50% 42%, rgba(26,54,93,0.6), transparent 34%); }
+      .content { position: relative; z-index: 1; width: 100%; height: 100%; box-sizing: border-box; padding: 112px 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+      .label { margin: 0; color: #E8C547; font-family: MontserratLocal, sans-serif; font-size: 24px; font-weight: 800; }
+      h2 { margin: 0; font-size: 64px; line-height: 1.2; text-align: center; }
+      h2 span { color: #E8C547; }
+      .proofs { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; width: 1120px; margin-top: 28px; }
+      .tile { background: #0F1628; border: 1px solid #C9A84C; border-radius: 10px; min-height: 260px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; box-shadow: 0 0 70px rgba(201,168,76,0.1); }
+      .tile img { width: 46px; height: 46px; }
+      .tile strong { color: #E8C547; font-size: 72px; line-height: 1; }
+      .tile small { font-size: 32px; color: #F4F6FB; }
+      .support { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; width: 1120px; }
+      .support div { display: flex; align-items: center; justify-content: center; gap: 14px; background: rgba(15,22,40,0.82); border: 1px solid rgba(201,168,76,0.45); border-radius: 8px; padding: 22px; font-size: 27px; font-weight: 700; }
+      .support img { width: 30px; height: 30px; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set(".label, h2, .tile, .tile img, .support div, .content", { opacity: 1, y: 0, scale: 1, rotation: 0, filter: "none" }, 0);
+      window.__timelines["beat-4-speed"] = tl;
+    </script>
+  </div>
+</template>

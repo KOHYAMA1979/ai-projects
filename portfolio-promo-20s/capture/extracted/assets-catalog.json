@@ -1,0 +1,89 @@
+[
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/nexcore-banner-updated.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "Client NexCore。左にポートレート、右に「AIと共に歩む 未来の創造主」「目的達成の本質を確実に形にする。」の見出しが入ったバナー画像。",
+    "description": "Client NexCore。左にポートレート、右に「AIと共に歩む 未来の創造主」「目的達成の本質を確実に形にする。」の見出しが入ったバナー画像。",
+    "nearestHeading": "「作って終わり」じゃない。集客まで考えた制作を。",
+    "sectionClasses": "section identity",
+    "aboveFold": true
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/key-visual-shinpeki.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "深碧の調べ（あおのうた）— 世界樹とクジラ、楽譜が流れる幻想的なキービジュアル",
+    "description": "深碧の調べ（あおのうた）— 世界樹とクジラ、楽譜が流れる幻想的なキービジュアル",
+    "nearestHeading": "YouTubeサムネイル・キービジュアル",
+    "sectionClasses": "content-card content-card--youtube",
+    "aboveFold": true
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/youtube-thumb-ai-prompts.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "YouTubeサムネイル — 資料作成の秒速化・超優良級プロンプト5選を訴求する構成",
+    "description": "YouTubeサムネイル — 資料作成の秒速化・超優良級プロンプト5選を訴求する構成",
+    "nearestHeading": "YouTubeサムネイル・キービジュアル",
+    "sectionClasses": "content-card content-card--youtube",
+    "aboveFold": true
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/clean-smile-logo.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "CLEAN SMILE Total Clean Service 企業ロゴ",
+    "description": "CLEAN SMILE Total Clean Service 企業ロゴ",
+    "nearestHeading": "企業ロゴ・ブランディング",
+    "sectionClasses": "content-card content-card--brand",
+    "aboveFold": true
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/solar-flyer.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "イベントチラシ制作実績 — 企業向けイベント告知チラシ",
+    "description": "イベントチラシ制作実績 — 企業向けイベント告知チラシ",
+    "nearestHeading": "イベント・企業チラシ制作",
+    "sectionClasses": "content-card",
+    "aboveFold": true
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/hero-pc.png",
+    "type": "Background",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null,
+    "nearestHeading": "ビジネスの未来はAI導入で決まる。総合的なAI活用サポートで、個人事業主と中小企業の集客を加速します。— KOHYAMA Digital Research In",
+    "sectionClasses": "section hero",
+    "aboveFold": true
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/%23n",
+    "type": "Other",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://kohyama1979.github.io/ai-projects/portfolio/images/hero-sp.png",
+    "type": "Background",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  }
+]

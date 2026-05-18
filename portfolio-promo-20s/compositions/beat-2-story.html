@@ -1,0 +1,46 @@
+<template id="beat-2-story-template">
+  <div id="beat-2-story" data-composition-id="beat-2-story" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+    <div class="bg"></div>
+    <div class="content">
+      <section class="left">
+        <p class="label">WHAT I DO</p>
+        <h2>集客まで考えた<br />制作を。</h2>
+        <div class="chips">
+          <div>Webページ・LP</div>
+          <div>AI画像生成</div>
+          <div>資料作成</div>
+          <div>集客導線設計</div>
+        </div>
+      </section>
+      <section class="right">
+        <div class="banner-wrap"><img src="../capture/assets/nexcore-banner-updated.png" alt="" /></div>
+      </section>
+    </div>
+    <div class="route"></div>
+    <style>
+      @font-face { font-family: MontserratLocal; src: url("../capture/assets/fonts/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf"); }
+      @font-face { font-family: NotoSansJPLocal; src: url("../capture/assets/fonts/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFM8k75s.ttf"); }
+      #beat-2-story { position: relative; width: 100%; height: 100%; overflow: hidden; color: #F4F6FB; background: #0A0E1A; font-family: NotoSansJPLocal, sans-serif; }
+      .bg { position: absolute; inset: 0; background: radial-gradient(circle at 72% 42%, rgba(26,54,93,0.65), transparent 34%), #0A0E1A; }
+      .content { position: relative; z-index: 2; width: 100%; height: 100%; padding: 120px 150px; box-sizing: border-box; display: grid; grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: 80px; }
+      .label { font-family: MontserratLocal, sans-serif; margin: 0 0 28px; color: #E8C547; font-size: 24px; font-weight: 800; }
+      h2 { margin: 0 0 46px; font-size: 72px; line-height: 1.18; font-weight: 800; }
+      .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 720px; }
+      .chips div { background: #0F1628; border: 1px solid #C9A84C; border-radius: 8px; padding: 22px 26px; font-size: 30px; font-weight: 700; box-shadow: 0 0 38px rgba(201,168,76,0.08); }
+      .banner-wrap { border: 1px solid rgba(232,197,71,0.65); border-radius: 18px; overflow: hidden; background: #0F1628; box-shadow: 0 24px 90px rgba(0,0,0,0.35); }
+      .banner-wrap img { display: block; width: 100%; height: auto; }
+      .route { position: absolute; z-index: 1; left: 545px; top: 520px; width: 660px; height: 3px; background: #E8C547; box-shadow: 0 0 22px rgba(232,197,71,0.75); }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set(".content, .label, h2, .route, .banner-wrap", { opacity: 1, y: 0, x: 0, rotationY: 0, clearProps: "filter" }, 0);
+      tl.set(".chips div", { opacity: 0, y: 38, scale: 0.98 }, 0);
+      tl.to(".chips div", { opacity: 1, y: 0, scale: 1, duration: 1.1, stagger: 0.85, ease: "power2.out" }, 0.6);
+      tl.fromTo(".route", { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 1.2, ease: "power2.inOut" }, 4.75);
+      tl.to(".banner-wrap img", { scale: 1.014, duration: 6.5, ease: "none" }, 0);
+      window.__timelines["beat-2-story"] = tl;
+    </script>
+  </div>
+</template>

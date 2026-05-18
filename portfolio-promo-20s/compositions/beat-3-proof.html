@@ -1,0 +1,50 @@
+<template id="beat-3-proof-template">
+  <div id="beat-3-proof" data-composition-id="beat-3-proof" data-start="0" data-duration="7" data-width="1920" data-height="1080">
+    <div class="glow"></div>
+    <div class="content">
+      <div class="title">
+        <p>DIGITAL CONTENTS</p>
+        <h2>制作物の幅が、<span>伝わる力</span>になる。</h2>
+      </div>
+      <div class="gallery">
+        <div class="wide-stack">
+          <article class="card visual"><img src="../capture/assets/key-visual-shinpeki.png" alt="" /><strong>キービジュアル</strong></article>
+          <article class="card thumb"><img src="../capture/assets/youtube-thumb-ai-prompts.png" alt="" /><strong>YouTubeサムネイル</strong></article>
+        </div>
+        <article class="card logo"><img src="../capture/assets/clean-smile-logo.png" alt="" /><strong>企業ロゴ</strong></article>
+        <article class="card flyer"><img src="../capture/assets/solar-flyer.png" alt="" /><strong>チラシ・広告</strong></article>
+      </div>
+    </div>
+    <style>
+      @font-face { font-family: MontserratLocal; src: url("../capture/assets/fonts/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf"); }
+      @font-face { font-family: NotoSansJPLocal; src: url("../capture/assets/fonts/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFM8k75s.ttf"); }
+      #beat-3-proof { position: relative; width: 100%; height: 100%; overflow: hidden; color: #F4F6FB; background: #0A0E1A; font-family: NotoSansJPLocal, sans-serif; }
+      .glow { position: absolute; inset: 0; background: radial-gradient(circle at 28% 60%, rgba(26,54,93,0.7), transparent 34%), radial-gradient(circle at 78% 42%, rgba(232,197,71,0.18), transparent 28%), #0A0E1A; }
+      .content { position: relative; z-index: 1; width: 100%; height: 100%; box-sizing: border-box; padding: 76px 126px 96px; display: flex; flex-direction: column; gap: 52px; }
+      .title { text-align: center; }
+      .title p { margin: 0 0 18px; color: #E8C547; font-family: MontserratLocal, sans-serif; font-size: 24px; font-weight: 800; }
+      .title h2 { margin: 0; font-size: 48px; line-height: 1.18; }
+      .title span { color: #E8C547; }
+      .gallery { flex: 1; display: grid; grid-template-columns: 1.4fr 0.95fr 0.95fr; gap: 28px; align-items: stretch; }
+      .wide-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 24px; min-height: 0; }
+      .card { background: #0F1628; border: 1px solid rgba(201,168,76,0.7); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 80px rgba(0,0,0,0.35); }
+      .card img { width: 100%; height: 78%; object-fit: cover; display: block; background: #EEF1F6; }
+      .wide-stack .card img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+      .wide-stack .card strong { min-height: 56px; font-size: 24px; }
+      .logo img { object-fit: contain; padding: 54px; box-sizing: border-box; }
+      .flyer img { height: 84%; object-fit: cover; }
+      .card strong { min-height: 96px; display: flex; align-items: center; padding: 0 26px; color: #E8C547; font-size: 27px; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set(".title p, .title h2, .card img, .glow", { opacity: 1, y: 0, rotationY: 0, scale: 1, clearProps: "filter" }, 0);
+      tl.set(".card", { opacity: 0, y: 82, rotationY: -4, scale: 0.985 }, 0);
+      tl.to(".card", { opacity: 1, y: 0, rotationY: 0, scale: 1, duration: 1.3, stagger: 1.05, ease: "power2.out" }, 0.75);
+      tl.to(".card img", { scale: 1.014, duration: 6.2, ease: "none" }, 0.75);
+      tl.fromTo(".glow", { opacity: 0.75 }, { opacity: 1, duration: 7, ease: "sine.inOut" }, 0);
+      window.__timelines["beat-3-proof"] = tl;
+    </script>
+  </div>
+</template>
