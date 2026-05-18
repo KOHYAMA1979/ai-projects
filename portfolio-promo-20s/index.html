@@ -1,159 +1,44 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KOHYAMA Portfolio Promo</title>
-    <style>
-      @font-face { font-family: MontserratLocal; src: url("capture/assets/fonts/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf"); }
-      @font-face { font-family: NotoSansJPLocal; src: url("capture/assets/fonts/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFM8k75s.ttf"); }
-      @font-face { font-family: NotoSerifJPLocal; src: url("capture/assets/fonts/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzWPebA.ttf"); }
-      body { margin: 0; background: #0A0E1A; }
-      #kohyama-portfolio-promo { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0A0E1A; color: #F4F6FB; font-family: NotoSansJPLocal, sans-serif; }
-      .scene { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 1; overflow: hidden; box-sizing: border-box; pointer-events: none; }
-      .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-      .veil { position: absolute; inset: 0; background: rgba(8, 11, 20, 0.42); box-shadow: inset 0 0 240px #080B14; }
-      .hero-message { position: absolute; z-index: 3; right: 120px; bottom: 165px; width: 780px; color: #F8FAFF; font-family: NotoSerifJPLocal, serif; font-size: 58px; font-weight: 700; line-height: 1.28; letter-spacing: 0; text-shadow: 0 8px 28px rgba(0,0,0,0.72), 0 0 26px rgba(45,134,255,0.5); }
-      .hero-message::before { content: ""; display: block; width: 220px; height: 3px; margin-bottom: 26px; background: linear-gradient(90deg, #E8C547, rgba(232,197,71,0)); box-shadow: 0 0 20px rgba(232,197,71,0.75); }
-      .hero-message strong { color: #E8C547; font-weight: 800; }
-      .s1-message { left: 690px; right: auto; top: 655px; bottom: auto; width: 1120px; font-size: 56px; }
-      .s1-message .lead { white-space: nowrap; }
-      .s1-message strong { display: block; margin-top: 10px; margin-left: 190px; font-size: 104px; line-height: 1; }
-      .s5-message { right: 72px; bottom: 185px; width: 1480px; font-size: 70px; white-space: nowrap; text-align: right; }
-      .s5-message::before { margin-left: auto; }
-      .s5-message strong { font-size: 80px; }
-      .scene-content { position: relative; z-index: 2; width: 100%; height: 100%; box-sizing: border-box; padding: 110px 150px; display: flex; flex-direction: column; justify-content: center; }
-      .eyebrow, .label { font-family: MontserratLocal, sans-serif; color: #E8C547; font-size: 25px; font-weight: 800; letter-spacing: 0; margin: 0 0 26px; }
-      h1, h2 { margin: 0; }
-      .s1 .scene-content { justify-content: flex-end; padding: 0 150px 82px; }
-      .s1 strong, .gold { color: #E8C547; }
-      .s2 .scene-content { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 80px; align-items: center; }
-      .s2 h2 { font-size: 62px; line-height: 1.18; margin-bottom: 36px; }
-      .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-      .chips div, .cta, .support div { background: #0F1628; border: 1px solid #C9A84C; border-radius: 8px; padding: 20px 24px; font-size: 24px; font-weight: 700; }
-      .banner { width: 100%; border: 1px solid #C9A84C; border-radius: 16px; overflow: hidden; background: #0F1628; box-shadow: 0 26px 90px rgba(0,0,0,0.42); }
-      .banner img { width: 100%; display: block; }
-      .route { position: absolute; left: 540px; top: 535px; width: 650px; height: 3px; background: #E8C547; box-shadow: 0 0 22px rgba(232,197,71,0.75); }
-      .s3, .s4 { background: radial-gradient(circle at 30% 55%, rgba(26,54,93,0.68), transparent 34%), radial-gradient(circle at 78% 42%, rgba(232,197,71,0.16), transparent 28%), #0A0E1A; }
-      .s3 .scene-content { padding: 76px 126px 96px; gap: 50px; align-items: center; }
-      .s3 .title { text-align: center; }
-      .s3 h2 { font-size: 48px; line-height: 1.18; }
-      .gallery { width: 100%; flex: 1; display: grid; grid-template-columns: 1.4fr 0.95fr 0.95fr; gap: 28px; }
-      .wide-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 24px; min-height: 0; }
-      .card { background: #0F1628; border: 1px solid rgba(201,168,76,0.72); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 80px rgba(0,0,0,0.34); }
-      .card img { width: 100%; height: 78%; object-fit: cover; display: block; background: #EEF1F6; }
-      .wide-stack .card img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-      .wide-stack .card strong { min-height: 56px; font-size: 24px; }
-      .card.logo img { object-fit: contain; padding: 54px; box-sizing: border-box; }
-      .card.flyer img { height: 84%; object-fit: cover; }
-      .card strong { min-height: 94px; display: flex; align-items: center; padding: 0 26px; color: #E8C547; font-size: 26px; }
-      .s4 .scene-content { align-items: center; text-align: center; gap: 32px; }
-      .s4 h2 { font-size: 56px; line-height: 1.2; }
-      .proofs { width: 1120px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 20px; }
-      .tile { background: #0F1628; border: 1px solid #C9A84C; border-radius: 10px; min-height: 252px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
-      .tile img { width: 46px; height: 46px; }
-      .tile strong { color: #E8C547; font-size: 62px; line-height: 1; }
-      .tile small { font-size: 28px; }
-      .support { width: 1120px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-      .support div { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 26px; }
-      .support img { width: 30px; height: 30px; }
-      .s5 .veil { background: rgba(8,11,20,0.16); box-shadow: inset 0 0 180px #080B14; }
-      .s5 .scene-content { align-items: flex-start; justify-content: flex-end; text-align: left; padding: 0 150px 82px; }
-    </style>
-  </head>
-  <body>
-    <div id="kohyama-portfolio-promo" data-composition-id="kohyama-portfolio-promo" data-start="0" data-duration="25" data-width="1920" data-height="1080">
-      <section id="scene-hook" class="clip scene s1" data-start="0" data-duration="4.5" data-track-index="1">
-        <img class="hero-img s1-img" src="capture/assets/hero-pc.png" alt="" / style="--hf-studio-offset-x: 0px; --hf-studio-offset-y: 2px; translate: var(--hf-studio-offset-x, 0px) var(--hf-studio-offset-y, 0px)" data-hf-studio-path-offset="true" data-hf-studio-original-translate="" data-hf-studio-original-inline-translate="none">
-        <div class="veil"></div>
-        <div class="hero-message s1-message"><span class="lead" style="--hf-studio-offset-x: 176px; --hf-studio-offset-y: -115px; translate: var(--hf-studio-offset-x, 0px) var(--hf-studio-offset-y, 0px); display: inline-block" data-hf-studio-path-offset="true" data-hf-studio-original-translate="" data-hf-studio-original-inline-translate="" data-hf-studio-original-transform-display="">個人事業主と中小企業の集客を、</span><strong>AIで加速する。</strong></div>
-      </section>
-      <section id="scene-story" class="clip scene s2" data-start="4.5" data-duration="6.5" data-track-index="1">
-        <div class="route"></div>
-        <div class="scene-content">
-          <div>
-            <p class="label">WHAT I DO</p>
-            <h2>集客まで考えた<br />制作を。</h2>
-            <div class="chips"><div>Webページ・LP</div><div>AI画像生成</div><div>資料作成</div><div>集客導線設計</div></div>
-          </div>
-          <div class="banner"><img src="capture/assets/nexcore-banner-updated.png" alt="" /></div>
-        </div>
-      </section>
-      <section id="scene-proof" class="clip scene s3" data-start="11" data-duration="7" data-track-index="1">
-        <div class="scene-content">
-          <div class="title"><p class="label">DIGITAL CONTENTS</p><h2>制作物の幅が、<span class="gold">伝わる力</span>になる。</h2></div>
-          <div class="gallery">
-            <div class="wide-stack">
-              <article class="card"><img src="capture/assets/key-visual-shinpeki.png" alt="" /><strong>キービジュアル</strong></article>
-              <article class="card"><img src="capture/assets/youtube-thumb-ai-prompts.png" alt="" /><strong>YouTubeサムネイル</strong></article>
-            </div>
-            <article class="card logo"><img src="capture/assets/clean-smile-logo.png" alt="" /><strong>企業ロゴ</strong></article>
-            <article class="card flyer"><img src="capture/assets/solar-flyer.png" alt="" /><strong>チラシ・広告</strong></article>
-          </div>
-        </div>
-      </section>
-      <section id="scene-speed" class="clip scene s4" data-start="18" data-duration="3" data-track-index="1">
-        <div class="scene-content">
-          <p class="label">SERVICE & POLICY</p>
-          <h2>速さと安心を、<span class="gold">最初から。</span></h2>
-          <div class="proofs">
-            <div class="tile"><img src="capture/assets/svgs/tick.svg?tile=1" alt="" /><strong>最短翌日</strong><small>納品対応</small></div>
-            <div class="tile"><img src="capture/assets/svgs/tick.svg?tile=2" alt="" /><strong>24時間以内</strong><small>原則返信</small></div>
-          </div>
-          <div class="support">
-            <div><img src="capture/assets/svgs/step-icon.svg?chip=1" alt="" />集客導線まで設計</div>
-            <div><img src="capture/assets/svgs/step-icon.svg?chip=2" alt="" />専門用語をかみ砕いて説明</div>
-          </div>
-        </div>
-      </section>
-      <section id="scene-cta" class="clip scene s5" data-start="21" data-duration="4" data-track-index="1">
-        <img class="hero-img s5-img" src="capture/assets/hero-pc.png" alt="" />
-        <div class="veil"></div>
-        <div class="hero-message s5-message">AIを、個人事業主と中小企業の<strong>味方に。</strong></div>
-      </section>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-    <script>
-      window.__timelines = window.__timelines || {};
-      const tl = gsap.timeline({ paused: true });
-      tl.set(".s1, .s2, .s3, .s4, .s5", { opacity: 1, scale: 1, y: 0, filter: "none" }, 0);
-      tl.set(".s2 .label, .s2 h2, .banner, .s3 .label, .s3 h2, .s4 .label, .s4 h2, .tile, .support div", { opacity: 1, y: 0, scale: 1, clearProps: "filter" }, 0);
-      tl.set(".s1-message, .s5-message", { opacity: 0, y: 42, scale: 0.985 }, 0);
-      tl.set(".s2 .chips div", { opacity: 0, y: 38, scale: 0.98 }, 4.5);
-      tl.set(".s3 .card", { opacity: 0, y: 82, scale: 0.985 }, 11);
-      tl.to(".s1-img", { scale: 1.02, duration: 4.5, ease: "none" }, 0);
-      tl.to(".s1-message", { opacity: 1, y: 0, scale: 1, duration: 2.6, ease: "power2.out" }, 0.35);
-      tl.to(".s2 .chips div", { opacity: 1, y: 0, scale: 1, duration: 1.1, stagger: 0.85, ease: "power2.out" }, 5.1);
-      tl.fromTo(".route", { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 1.2, ease: "power2.inOut" }, 9.2);
-      tl.to(".banner img", { scale: 1.014, duration: 6.5, ease: "none" }, 4.5);
-      tl.to(".s3 .card", { opacity: 1, y: 0, scale: 1, duration: 1.3, stagger: 1.05, ease: "power2.out" }, 11.75);
-      tl.to(".s3 .card img", { scale: 1.014, duration: 6.2, ease: "none" }, 11.75);
-      tl.to(".s5-img", { scale: 1.03, duration: 4, ease: "none" }, 21);
-      tl.to(".s5-message", { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power2.out" }, 21.35);
-      window.__timelines["kohyama-portfolio-promo"] = tl;
-tl.play(0);
-
-
-function fitPromo() {
-  const el = document.getElementById("kohyama-portfolio-promo");
-  if (!el) return;
-  const baseW = 1920;
-  const baseH = 1080;
-  const scale = Math.min(window.innerWidth / baseW, window.innerHeight / baseH);
-  document.body.style.margin = "0";
-  document.body.style.overflow = "hidden";
-  document.body.style.background = "#0A0E1A";
-  el.style.width = baseW + "px";
-  el.style.height = baseH + "px";
-  el.style.position = "absolute";
-  el.style.left = "50%";
-  el.style.top = "50%";
-  el.style.transformOrigin = "center center";
-  el.style.transform = `translate(-50%, -50%) scale(${scale})`;
-}
-
-fitPromo();
-window.addEventListener("resize", fitPromo);
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KOHYAMA Portfolio Promo</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #050814;
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+    }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+    main {
+      width: min(100vw, 1280px);
+      padding: 16px;
+      box-sizing: border-box;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <video controls autoplay muted playsinline poster="">
+      <source src="./promo.mp4" type="video/mp4">
+      お使いのブラウザでは動画を再生できません。
+    </video>
+  </main>
+</body>
 </html>
