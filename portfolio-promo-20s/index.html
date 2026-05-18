@@ -132,6 +132,27 @@
       tl.to(".s5-message", { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power2.out" }, 21.35);
       window.__timelines["kohyama-portfolio-promo"] = tl;
 tl.play(0);
+
+function fitPromo() {
+  const el = document.getElementById("kohyama-portfolio-promo");
+  if (!el) return;
+  const baseW = 1920;
+  const baseH = 1080;
+  const scale = Math.min(window.innerWidth / baseW, window.innerHeight / baseH);
+  document.body.style.margin = "0";
+  document.body.style.overflow = "hidden";
+  document.body.style.background = "#0A0E1A";
+  el.style.width = baseW + "px";
+  el.style.height = baseH + "px";
+  el.style.position = "absolute";
+  el.style.left = "50%";
+  el.style.top = "50%";
+  el.style.transformOrigin = "center center";
+  el.style.transform = `translate(-50%, -50%) scale(${scale})`;
+}
+
+fitPromo();
+window.addEventListener("resize", fitPromo);
     </script>
   </body>
 </html>
