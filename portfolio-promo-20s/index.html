@@ -116,7 +116,7 @@
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
-      tl.set(".s1", { opacity: 1 }, 0);
+      tl.set(".s1, .s2, .s3, .s4, .s5", { opacity: 1, scale: 1, y: 0, filter: "none" }, 0);
       tl.set(".s2 .label, .s2 h2, .banner, .s3 .label, .s3 h2, .s4 .label, .s4 h2, .tile, .support div", { opacity: 1, y: 0, scale: 1, clearProps: "filter" }, 0);
       tl.set(".s1-message, .s5-message", { opacity: 0, y: 42, scale: 0.985 }, 0);
       tl.set(".s2 .chips div", { opacity: 0, y: 38, scale: 0.98 }, 4.5);
@@ -132,7 +132,7 @@
       tl.to(".s5-message", { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power2.out" }, 21.35);
       window.__timelines["kohyama-portfolio-promo"] = tl;
 tl.play(0);
-setTimeout(() => tl.seek(1).play(), 300);
+
 
 function fitPromo() {
   const el = document.getElementById("kohyama-portfolio-promo");
