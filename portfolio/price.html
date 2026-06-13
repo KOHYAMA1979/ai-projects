@@ -50,8 +50,11 @@ main{padding-top:4.2rem}
 .row .desc{font-size:.8rem;color:var(--muted);margin-top:.15rem}
 .price{font-family:var(--font-en);font-weight:800;font-size:clamp(1.05rem,3.4vw,1.35rem);color:var(--gold);white-space:nowrap;text-align:right}
 .price small{font-family:var(--font-jp);font-size:.7rem;font-weight:600;color:var(--muted);margin-left:.15rem}
+.price-stack{display:flex;flex-direction:column;gap:.25rem;align-items:flex-end}
+.price-stack span{display:block;font-size:clamp(.88rem,2.4vw,1.05rem)}
+.price-stack b{font-family:var(--font-jp);font-size:.68rem;font-weight:600;color:var(--muted);margin-right:.35rem}
 .row--talk .price{color:var(--text);font-size:1rem}
-@media (max-width:560px){.row{grid-template-columns:44px 1fr;grid-template-areas:"tag title" "tag price"}.tag{grid-area:tag;width:44px;height:40px}.row h3,.row .desc{grid-area:auto}.row>div:nth-child(2){grid-area:title}.price{grid-area:price;text-align:left;margin-top:.3rem}}
+@media (max-width:560px){.row{grid-template-columns:44px 1fr;grid-template-areas:"tag title" "tag price"}.tag{grid-area:tag;width:44px;height:40px}.row h3,.row .desc{grid-area:auto}.row>div:nth-child(2){grid-area:title}.price{grid-area:price;text-align:left;margin-top:.3rem}.price-stack{align-items:flex-start}}
 /* example box */
 .examples{background:var(--bg-section)}
 .ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
@@ -151,13 +154,13 @@ main{position:relative;background:transparent}
       <div class="menu">
         <div class="row">
           <div class="tag">LP</div>
-          <div><h3>Webページ / LP制作</h3><p class="desc">1ページ構成／お問い合わせフォーム／スマホ対応／集客導線設計。ここまで込みの定額です。ページ追加・特殊機能は事前お見積りで追加。</p></div>
-          <p class="price">66,000<small>円</small></p>
+          <div><h3>Webページ / LP制作</h3><p class="desc">1ページ構成を基本に、スマホ対応・集客導線設計まで対応します。ページ追加は別途対応可能です。</p></div>
+          <p class="price price-stack"><span><b>スタンダード</b>66,000<small>円〜</small></span><span><b>プレミアム</b>165,000<small>円〜</small></span></p>
         </div>
         <div class="row">
           <div class="tag">SL</div>
           <div><h3>スライド資料作成</h3><p class="desc">提案書・講座資料・営業資料を、見やすく伝わる形に。10枚まで込みの定額。11枚目以降は1枚+3,300円。</p></div>
-          <p class="price">33,000<small>円</small></p>
+          <p class="price">33,000<small>円〜</small></p>
         </div>
         <div class="row">
           <div class="tag">BR</div>
