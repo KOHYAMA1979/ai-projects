@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>料金表 | KOHYAMAデジタル総研</title>
+<meta name="description" content="個人事業主・中小企業向けのAI活用・Web制作サービス料金表。LP制作、チラシ、ロゴ、SNS画像、AIアシスタント制作。お見積り無料、最短翌日納品対応。" />
+<meta name="color-scheme" content="dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Marcellus&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg-deep:#0a0e1a;--bg-section:#0f1628;--bg-card:#141c32;--bg-card-darker:#0d1220;--gold:#e8c547;--gold-dim:rgba(232,197,71,.35);--gold-line:rgba(232,197,71,.55);--text:#f4f6fb;--muted:rgba(244,246,251,.72);--red:#ff6b6b;--font-jp:"Noto Sans JP",sans-serif;--font-en:"Montserrat",sans-serif;--radius:16px;--maxw:920px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#0a0e1a;color-scheme:dark}
+body{font-family:var(--font-jp);background:var(--bg-deep);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.7rem clamp(1rem,4vw,2.2rem);background:rgba(10,14,26,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,197,71,.18)}
+.brand{font-family:var(--font-en);font-weight:800;letter-spacing:.14em;font-size:.95rem;color:var(--gold);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--text);font-family:var(--font-jp);font-weight:600;letter-spacing:.06em;font-size:.8rem;margin-left:.5rem}
+.btn{display:inline-block;font-weight:700;letter-spacing:.05em;text-decoration:none;border-radius:999px;transition:transform .2s,box-shadow .2s,background .25s;text-align:center}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn-gold{background:linear-gradient(135deg,#f3d97a,var(--gold));color:#161200;box-shadow:0 4px 18px rgba(232,197,71,.28)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(232,197,71,.4)}
+.btn-ghost{border:1px solid var(--gold-line);color:var(--gold);background:transparent}
+.btn-ghost:hover{background:rgba(232,197,71,.1)}
+.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}
+.btn-lg{padding:.95rem 2.4rem;font-size:1rem}
+main{padding-top:4.2rem}
+.section{padding:clamp(2.6rem,6vw,4rem) clamp(1.2rem,5vw,2.5rem)}
+.inner{max-width:var(--maxw);margin:0 auto}
+.eyebrow{font-family:var(--font-en);font-size:.74rem;font-weight:700;letter-spacing:.32em;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:.9rem;margin-bottom:.9rem}
+.eyebrow::before,.eyebrow::after{content:"";flex:0 0 48px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-line))}
+.eyebrow::after{background:linear-gradient(270deg,transparent,var(--gold-line))}
+.headline{font-size:clamp(1.45rem,4vw,2rem);font-weight:700;line-height:1.5;letter-spacing:.02em;text-align:center}
+.lead{color:var(--muted);font-size:clamp(.9rem,2.4vw,.98rem);margin-top:.9rem;text-align:center}
+.gold{color:var(--gold)}
+/* hero band */
+.price-hero{background:linear-gradient(180deg,#070b15,#0f1628);text-align:center;border-bottom:1px solid rgba(232,197,71,.18);padding-top:clamp(3rem,7vw,4.5rem)}
+.hero-badge{display:inline-block;border:1px solid var(--gold-line);color:var(--gold);border-radius:999px;padding:.3rem 1.1rem;font-size:.8rem;font-weight:600;margin-bottom:1.1rem}
+.price-hero h1{font-size:clamp(2rem,7vw,3rem);font-weight:700;letter-spacing:.08em}
+.hero-points{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:1.3rem}
+.hero-points span{background:var(--bg-card);border:1px solid rgba(232,197,71,.3);border-radius:999px;padding:.4rem 1rem;font-size:.82rem;font-weight:600}
+/* menu rows */
+.menu{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem}
+.row{display:grid;grid-template-columns:56px 1fr auto;gap:1rem;align-items:center;background:var(--bg-card);border:1px solid rgba(244,246,251,.1);border-radius:14px;padding:1rem 1.2rem}
+.row:hover{border-color:var(--gold-dim)}
+.tag{width:56px;height:44px;border-radius:10px;background:var(--bg-card-darker);border:1px solid var(--gold-line);color:var(--gold);font-family:var(--font-en);font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center;letter-spacing:.04em}
+.row h3{font-size:.98rem;font-weight:700;line-height:1.5}
+.row .desc{font-size:.8rem;color:var(--muted);margin-top:.15rem}
+.price{font-family:var(--font-en);font-weight:800;font-size:clamp(1.05rem,3.4vw,1.35rem);color:var(--gold);white-space:nowrap;text-align:right}
+.price small{font-family:var(--font-jp);font-size:.7rem;font-weight:600;color:var(--muted);margin-left:.15rem}
+.row--talk .price{color:var(--text);font-size:1rem}
+@media (max-width:560px){.row{grid-template-columns:44px 1fr;grid-template-areas:"tag title" "tag price"}.tag{grid-area:tag;width:44px;height:40px}.row h3,.row .desc{grid-area:auto}.row>div:nth-child(2){grid-area:title}.price{grid-area:price;text-align:left;margin-top:.3rem}}
+/* example box */
+.examples{background:var(--bg-section)}
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+@media (max-width:680px){.ex-grid{grid-template-columns:1fr}}
+.ex{background:var(--bg-card-darker);border:1px solid rgba(232,197,71,.25);border-radius:14px;padding:1.3rem 1.4rem}
+.ex .t{font-weight:700;font-size:.92rem;margin-bottom:.4rem;color:var(--gold)}
+.ex p{font-size:.86rem;color:var(--muted)}
+.ex .p{font-family:var(--font-en);font-weight:800;color:var(--text);font-size:1.1rem;margin-top:.5rem}
+/* sets */
+.sets{display:flex;flex-direction:column;gap:1.1rem;margin-top:2rem}
+.set{position:relative;background:linear-gradient(180deg,#141c32,#0f1628);border:1px solid rgba(232,197,71,.3);border-radius:var(--radius);padding:1.5rem 1.4rem 1.4rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center}
+@media (max-width:620px){.set{grid-template-columns:1fr}}
+.rank{position:absolute;top:-12px;left:1.2rem;background:linear-gradient(135deg,#f3d97a,var(--gold));color:#161200;font-weight:800;font-size:.74rem;border-radius:999px;padding:.25rem .9rem;letter-spacing:.06em}
+.set h3{font-size:1.05rem;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}
+.chips span{border:1px solid rgba(244,246,251,.22);border-radius:999px;padding:.22rem .8rem;font-size:.76rem;color:var(--muted)}
+.set-price{text-align:right}
+@media (max-width:620px){.set-price{text-align:left}}
+.was{font-size:.8rem;color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(255,107,107,.7)}
+.now{font-family:var(--font-en);font-weight:800;font-size:1.55rem;color:var(--gold)}
+.now small{font-family:var(--font-jp);font-size:.72rem;color:var(--muted);font-weight:600}
+.save{display:inline-block;background:rgba(232,197,71,.14);border:1px solid var(--gold-line);color:var(--gold);border-radius:6px;font-size:.74rem;font-weight:700;padding:.15rem .6rem;margin-top:.3rem}
+/* options + support */
+.two-col{display:grid;grid-template-columns:1.15fr .85fr;gap:1.2rem;margin-top:2rem}
+@media (max-width:760px){.two-col{grid-template-columns:1fr}}
+.panel{background:var(--bg-card);border:1px solid rgba(244,246,251,.1);border-radius:var(--radius);padding:1.4rem 1.5rem}
+.panel h3{font-size:1rem;color:var(--gold);margin-bottom:1rem;text-align:center;letter-spacing:.06em}
+.opt{display:flex;justify-content:space-between;gap:1rem;font-size:.86rem;padding:.5rem 0;border-bottom:1px dashed rgba(244,246,251,.12)}
+.opt:last-child{border-bottom:0}
+.opt b{font-family:var(--font-en);color:var(--gold);font-weight:700;white-space:nowrap}
+.support{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem}
+.sup{background:var(--bg-card-darker);border:1px solid var(--gold-line);border-radius:12px;padding:.8rem .6rem;text-align:center;font-size:.8rem;font-weight:700;line-height:1.5}
+.sup em{display:block;font-style:normal;font-size:1.05rem;margin-bottom:.15rem}
+.notes{margin-top:1.6rem;font-size:.78rem;color:var(--muted);line-height:1.9}
+/* cta */
+.final{background:var(--bg-section);text-align:center}
+.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
+.cta-email{margin-top:1.4rem;font-size:.86rem;color:var(--muted)}
+.cta-email a{color:var(--gold);text-decoration:none}
+.site-footer{text-align:center;padding:1.8rem 1rem 2.4rem;font-size:.78rem;color:var(--muted);border-top:1px solid rgba(244,246,251,.08)}
+
+/* ==== refined theme ==== */
+:root{--bg-deep:#06090f;--bg-section:#0a0f1a;--bg-card:#0d1320;--bg-card-darker:#0a0f1a;--gold:#c9a86a;--gold-dim:rgba(201,168,106,.3);--gold-line:rgba(201,168,106,.38);--text:#edeae2;--muted:rgba(237,234,226,.62);--font-jp:"Noto Sans JP",sans-serif;--font-en:"Marcellus",serif;--radius:2px}
+body{font-weight:300;letter-spacing:.02em}
+h1,h2,h3,.headline,.ja-title{font-family:"Shippori Mincho",serif!important;font-weight:600!important;letter-spacing:.1em}
+.price-hero h1{font-weight:700!important;letter-spacing:.16em}
+.eyebrow{letter-spacing:.5em;font-family:"Marcellus",serif;font-weight:400}
+.btn{border-radius:1px!important;letter-spacing:.2em;font-weight:500}
+.btn-gold{background:var(--gold)!important;color:#0c0903!important;box-shadow:none!important}
+.btn-gold:hover{background:#e6cd92!important;transform:none!important;box-shadow:none!important}
+.btn-ghost{border:1px solid var(--gold-line)!important;color:#e6cd92!important}
+.btn-ghost:hover{background:var(--gold)!important;color:#0c0903!important}
+.hero-badge{border-radius:1px;letter-spacing:.2em;font-weight:400}
+.hero-points span{border-radius:1px;font-weight:400;letter-spacing:.1em;background:transparent;border:1px solid rgba(201,168,106,.25)}
+.row,.set,.panel,.ex,.info-box,.faq-item,.form-card{border-radius:1px!important}
+.tag{border-radius:1px;font-family:"Marcellus",serif;font-weight:400}
+.tag-list li,.chips span,.sup{border-radius:1px}
+.rank{border-radius:1px;background:var(--gold);color:#0c0903;letter-spacing:.12em;font-weight:500}
+.price,.now,.opt b,.ex .p,.step .num{font-family:"Marcellus",serif!important;font-weight:400!important}
+.save{border-radius:1px;background:transparent}
+.sup{font-weight:400;letter-spacing:.1em}
+.sup em{display:none}
+input,select,textarea{border-radius:1px!important}
+.submit{border-radius:1px!important;background:var(--gold)!important;color:#0c0903!important;box-shadow:none!important;letter-spacing:.2em}
+.submit:hover{background:#e6cd92!important;transform:none!important;box-shadow:none!important}
+.glass{background:linear-gradient(180deg,#0d1320,#0a0f1a)!important;border-radius:1px!important}
+.bgfill{position:fixed;inset:0;background:#06090f;z-index:-10;pointer-events:none}
+main{position:relative;background:transparent}
+</style>
+</head>
+<body>
+<div class="bgfill" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">KOHYAMA<span>デジタル総研</span></a>
+  <a class="btn btn-gold btn-sm" href="contact.html">お問い合わせ</a>
+</header>
+
+<main>
+  <section class="section price-hero">
+    <div class="inner">
+      <p class="hero-badge">個人事業主・中小企業向け</p>
+      <h1>料金表</h1>
+      <p class="lead">AIで、制作も発信ももっと速く、わかりやすく。<br />相談から実制作まで、ワンストップで対応。</p>
+      <div class="hero-points">
+        <span>全メニュー定額・税込</span>
+        <span>お見積り無料</span>
+        <span>最短翌日納品対応</span>
+        <span>修正2回まで無料</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+      <p class="eyebrow">SERVICE MENU</p>
+      <h2 class="headline">サービスメニュー・料金一覧</h2>
+      <div class="menu">
+        <div class="row">
+          <div class="tag">LP</div>
+          <div><h3>Webページ / LP制作</h3><p class="desc">1ページ構成／お問い合わせフォーム／スマホ対応／集客導線設計。ここまで込みの定額です。ページ追加・特殊機能は事前お見積りで追加。</p></div>
+          <p class="price">66,000<small>円</small></p>
+        </div>
+        <div class="row">
+          <div class="tag">SL</div>
+          <div><h3>スライド資料作成</h3><p class="desc">提案書・講座資料・営業資料を、見やすく伝わる形に。10枚まで込みの定額。11枚目以降は1枚+3,300円。</p></div>
+          <p class="price">33,000<small>円</small></p>
+        </div>
+        <div class="row">
+          <div class="tag">BR</div>
+          <div><h3>企業ロゴ・ブランディング</h3><p class="desc">ロゴ案3案ご提案→1案を仕上げ。カラー・言葉の方向性の設計まで込みの定額です。</p></div>
+          <p class="price">33,000<small>円</small></p>
+        </div>
+        <div class="row">
+          <div class="tag">GPT</div>
+          <div><h3>専用AIアシスタント制作</h3><p class="desc">業務専用AIの設計＋初期設定＋使い方レクチャーまで込みの定額。Web埋め込み・API連携は事前お見積りで追加。</p></div>
+          <p class="price">25,000<small>円</small></p>
+        </div>
+        <div class="row">
+          <div class="tag">AD</div>
+          <div><h3>チラシ・広告作成</h3><p class="desc">紙・SNS広告に使える販促デザイン。片面1案・印刷用データ納品まで込みの定額。両面は事前お見積りで追加。</p></div>
+          <p class="price">22,000<small>円</small></p>
+        </div>
+        <div class="row">
+          <div class="tag">IMG</div>
+          <div><h3>SNS用画像・AI画像生成</h3><p class="desc">SNS投稿用の挿絵・告知画像・キービジュアル。3点まで込みの定額。追加は1点+3,300円。</p></div>
+          <p class="price">11,000<small>円</small></p>
+        </div>
+        <div class="row row--talk">
+          <div class="tag">AI</div>
+          <div><h3>AI秘書導入（AIエージェント）</h3><p class="desc">業務効率化や自動化を支援するAIエージェントの導入・設定・運用サポート。内容に応じてお見積りします。</p></div>
+          <p class="price">応談<small>（無料相談から）</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section examples">
+    <div class="inner">
+      <p class="eyebrow">CASE</p>
+      <h2 class="headline">よくあるご依頼例</h2>
+      <p class="lead">「結局いくらかかるの？」にお答えする実例です。</p>
+      <div class="ex-grid">
+        <div class="ex">
+          <p class="t">美容院・飲食経営さま向け：開業準備セット</p>
+          <p>LP1ページ（お問い合わせフォーム付き）＋ SNS告知画像3点</p>
+          <p class="p">77,000円<span style="font-size:.72rem;font-weight:600;color:var(--muted)">（税込）</span></p>
+        </div>
+        <div class="ex">
+          <p class="t">講師業さま：講座スタートセット</p>
+          <p>講座スライド10枚 ＋ 募集チラシ1案</p>
+          <p class="p">55,000円<span style="font-size:.72rem;font-weight:600;color:var(--muted)">（税込）</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+      <p class="eyebrow">SET PLAN</p>
+      <h2 class="headline">おすすめセットプラン</h2>
+      <p class="lead">単品でそろえるより、まとめてお得に。</p>
+      <div class="sets">
+        <div class="set">
+          <span class="rank">人気 No.1</span>
+          <div>
+            <h3>AIスターターセット</h3>
+            <div class="chips"><span>SNS用画像・AI画像生成</span><span>専用AIアシスタント</span><span>簡易スライド資料</span></div>
+          </div>
+          <div class="set-price">
+            <p class="was">単品合計 69,000円</p>
+            <p class="now">59,800<small>円（税込）</small></p>
+            <span class="save">9,200円おトク</span>
+          </div>
+        </div>
+        <div class="set">
+          <span class="rank">人気 No.2</span>
+          <div>
+            <h3>個人事業主スターターセット</h3>
+            <div class="chips"><span>簡易LP</span><span>紹介スライド資料</span><span>企業ロゴ</span></div>
+          </div>
+          <div class="set-price">
+            <p class="was">単品合計 132,000円</p>
+            <p class="now">110,000<small>円（税込）</small></p>
+            <span class="save">22,000円おトク</span>
+          </div>
+        </div>
+        <div class="set">
+          <span class="rank">人気 No.3</span>
+          <div>
+            <h3>集客制作セット</h3>
+            <div class="chips"><span>LP</span><span>チラシ広告</span><span>SNS画像</span></div>
+          </div>
+          <div class="set-price">
+            <p class="was">単品合計 99,000円</p>
+            <p class="now">85,800<small>円（税込）</small></p>
+            <span class="save">13,200円おトク</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section examples">
+    <div class="inner">
+      <div class="two-col">
+        <div class="panel">
+          <h3>オプションメニュー</h3>
+          <div class="opt"><span>GPTs・Gem制作追加（1体）</span><b>+16,500円</b></div>
+          <div class="opt"><span>Webページ改修（納品後・1回）</span><b>+11,000円</b></div>
+          <div class="opt"><span>文章リライト（2,000字まで）</span><b>+5,500円</b></div>
+          <div class="opt"><span>運用相談（60分）</span><b>+5,500円</b></div>
+          <div class="opt"><span>画像追加制作（1点）</span><b>+3,300円</b></div>
+          <div class="opt"><span>資料ページ追加（1枚）</span><b>+3,300円</b></div>
+        </div>
+        <div class="panel">
+          <h3>安心のサポート</h3>
+          <div class="support">
+            <div class="sup">お見積り無料</div>
+            <div class="sup">最短翌日納品</div>
+            <div class="sup">修正2回まで無料</div>
+            <div class="sup">専門用語少なめ</div>
+          </div>
+        </div>
+      </div>
+      <p class="notes">※掲載価格はすべて税込の定額です。記載の範囲内であれば、後から料金が増えることはありません。範囲を超えるご要望は、必ず事前にお見積りをご提示し、ご了承いただいてから着手します。<br />※修正は各メニュー2回まで無料、3回目以降は内容に応じて別途お見積りとなります。<br />※制作実績としての掲載（連絡先など非公開部分は加工のうえ）にご協力いただける場合、ご相談に応じた割引が可能です。</p>
+    </div>
+  </section>
+
+  <section class="section final">
+    <div class="inner">
+      <p class="eyebrow">CONTACT</p>
+      <h2 class="headline">まずは、無料相談から。</h2>
+      <p class="lead">「どのメニューが合うか分からない」段階でも大丈夫。<br />原則24時間以内にご返信します。</p>
+      <div class="cta-row">
+        <a class="btn btn-gold btn-lg" href="contact.html">無料相談を申し込む</a>
+        <a class="btn btn-ghost btn-lg" href="index.html">制作実績を見る</a>
+      </div>
+      <p class="cta-email"><a href="mailto:info@digital2026.net">info@digital2026.net</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 KOHYAMAデジタル総研 / 神山 裕貴</p>
+</footer>
+</body>
+</html>

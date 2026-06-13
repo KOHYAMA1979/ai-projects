@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>お問い合わせ・無料相談 | KOHYAMAデジタル総研</title>
+<meta name="description" content="KOHYAMAデジタル総研へのお問い合わせ・無料見積もりはこちら。原則24時間以内にご返信、土日祝も受付対応しています。" />
+<meta name="color-scheme" content="dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Marcellus&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg-deep:#0a0e1a;--bg-section:#0f1628;--bg-card:#141c32;--bg-card-darker:#0d1220;--gold:#e8c547;--gold-dim:rgba(232,197,71,.35);--gold-line:rgba(232,197,71,.55);--text:#f4f6fb;--muted:rgba(244,246,251,.72);--err:#ff8080;--font-jp:"Noto Sans JP",sans-serif;--font-en:"Montserrat",sans-serif;--radius:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#0a0e1a;color-scheme:dark}
+body{font-family:var(--font-jp);background:var(--bg-deep);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.7rem clamp(1rem,4vw,2.2rem);background:rgba(10,14,26,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,197,71,.18)}
+.brand{font-family:var(--font-en);font-weight:800;letter-spacing:.14em;font-size:.95rem;color:var(--gold);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--text);font-family:var(--font-jp);font-weight:600;letter-spacing:.06em;font-size:.8rem;margin-left:.5rem}
+.back{font-size:.82rem;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--gold)}
+main{max-width:680px;margin:0 auto;padding:6rem clamp(1.2rem,5vw,2rem) 3rem}
+.eyebrow{font-family:var(--font-en);font-size:.74rem;font-weight:700;letter-spacing:.32em;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:.9rem;margin-bottom:.9rem}
+.eyebrow::before,.eyebrow::after{content:"";flex:0 0 48px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-line))}
+.eyebrow::after{background:linear-gradient(270deg,transparent,var(--gold-line))}
+h1{font-size:clamp(1.5rem,5vw,2rem);font-weight:700;text-align:center;letter-spacing:.02em}
+.lead{color:var(--muted);font-size:.92rem;text-align:center;margin-top:.9rem}
+.form-card{background:linear-gradient(180deg,#141c32,#0f1628);border:1px solid rgba(232,197,71,.28);border-radius:calc(var(--radius) + 4px);padding:clamp(1.4rem,5vw,2.2rem);margin-top:2rem;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.field{margin-bottom:1.3rem}
+label{display:block;font-size:.86rem;font-weight:700;margin-bottom:.45rem}
+.req{color:var(--gold);font-size:.78rem;margin-left:.25rem}
+input,select,textarea{width:100%;background:var(--bg-card-darker);border:1px solid rgba(244,246,251,.18);border-radius:10px;color:var(--text);font-family:var(--font-jp);font-size:16px;padding:.8rem 1rem;transition:border-color .25s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e8c547' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:16px}
+textarea{min-height:140px;resize:vertical}
+.error{display:none;color:var(--err);font-size:.78rem;margin-top:.35rem}
+.has-error input,.has-error select{border-color:var(--err)}
+.has-error .error{display:block}
+.submit{display:block;width:100%;border:none;cursor:pointer;font-family:var(--font-jp);font-weight:700;font-size:1rem;letter-spacing:.05em;border-radius:999px;padding:1rem;background:linear-gradient(135deg,#f3d97a,var(--gold));color:#161200;box-shadow:0 4px 18px rgba(232,197,71,.28);transition:transform .2s,box-shadow .2s;margin-top:.4rem}
+.submit:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(232,197,71,.4)}
+.submit:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.footnote{font-size:.78rem;color:var(--muted);text-align:center;margin-top:1.1rem;line-height:1.9}
+.mail-note{text-align:center;font-size:.86rem;color:var(--muted);margin-top:1.6rem}
+.mail-note a{color:var(--gold);text-decoration:none}
+.mail-note a:hover{text-decoration:underline}
+.site-footer{text-align:center;padding:1.8rem 1rem 2.4rem;font-size:.78rem;color:var(--muted);border-top:1px solid rgba(244,246,251,.08)}
+
+/* ==== refined theme ==== */
+:root{--bg-deep:#06090f;--bg-section:#0a0f1a;--bg-card:#0d1320;--bg-card-darker:#0a0f1a;--gold:#c9a86a;--gold-dim:rgba(201,168,106,.3);--gold-line:rgba(201,168,106,.38);--text:#edeae2;--muted:rgba(237,234,226,.62);--font-jp:"Noto Sans JP",sans-serif;--font-en:"Marcellus",serif;--radius:2px}
+body{font-weight:300;letter-spacing:.02em}
+h1,h2,h3,.headline,.ja-title{font-family:"Shippori Mincho",serif!important;font-weight:600!important;letter-spacing:.1em}
+.price-hero h1{font-weight:700!important;letter-spacing:.16em}
+.eyebrow{letter-spacing:.5em;font-family:"Marcellus",serif;font-weight:400}
+.btn{border-radius:1px!important;letter-spacing:.2em;font-weight:500}
+.btn-gold{background:var(--gold)!important;color:#0c0903!important;box-shadow:none!important}
+.btn-gold:hover{background:#e6cd92!important;transform:none!important;box-shadow:none!important}
+.btn-ghost{border:1px solid var(--gold-line)!important;color:#e6cd92!important}
+.btn-ghost:hover{background:var(--gold)!important;color:#0c0903!important}
+.hero-badge{border-radius:1px;letter-spacing:.2em;font-weight:400}
+.hero-points span{border-radius:1px;font-weight:400;letter-spacing:.1em;background:transparent;border:1px solid rgba(201,168,106,.25)}
+.row,.set,.panel,.ex,.info-box,.faq-item,.form-card{border-radius:1px!important}
+.tag{border-radius:1px;font-family:"Marcellus",serif;font-weight:400}
+.tag-list li,.chips span,.sup{border-radius:1px}
+.rank{border-radius:1px;background:var(--gold);color:#0c0903;letter-spacing:.12em;font-weight:500}
+.price,.now,.opt b,.ex .p,.step .num{font-family:"Marcellus",serif!important;font-weight:400!important}
+.save{border-radius:1px;background:transparent}
+.sup{font-weight:400;letter-spacing:.1em}
+.sup em{display:none}
+input,select,textarea{border-radius:1px!important}
+.submit{border-radius:1px!important;background:var(--gold)!important;color:#0c0903!important;box-shadow:none!important;letter-spacing:.2em}
+.submit:hover{background:#e6cd92!important;transform:none!important;box-shadow:none!important}
+.glass{background:linear-gradient(180deg,#0d1320,#0a0f1a)!important;border-radius:1px!important}
+.bgfill{position:fixed;inset:0;background:#06090f;z-index:-10;pointer-events:none}
+main{position:relative;background:transparent}
+</style>
+</head>
+<body>
+<div class="bgfill" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">KOHYAMA<span>デジタル総研</span></a>
+  <a class="back" href="index.html">← トップに戻る</a>
+</header>
+
+<main>
+  <p class="eyebrow">CONTACT</p>
+  <h1>お問い合わせ・無料相談</h1>
+  <p class="lead">フォームに入力して送信してください。<br />原則24時間以内にご返信します。土日祝も受付対応。</p>
+
+  <form class="form-card" id="estimate-form" novalidate>
+    <div class="field" data-field="name">
+      <label for="f-name">お名前<span class="req">＊必須</span></label>
+      <input type="text" id="f-name" name="name" autocomplete="name" placeholder="山田 太郎" required />
+      <p class="error" role="alert">入力してください。</p>
+    </div>
+    <div class="field" data-field="phone">
+      <label for="f-phone">お電話番号<span class="req">＊必須</span></label>
+      <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="090-xxxx-xxxx" required />
+      <p class="error" role="alert">入力してください。</p>
+    </div>
+    <div class="field">
+      <label for="f-email">メールアドレス</label>
+      <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email" placeholder="example@email.com" />
+    </div>
+    <div class="field" data-field="service">
+      <label for="f-service">ご希望のサービス<span class="req">＊必須</span></label>
+      <select id="f-service" name="service" required>
+        <option value="">サービスを選択</option>
+        <option value="Webページ・LP制作">Webページ・LP制作</option>
+        <option value="ホームページ作成">ホームページ作成</option>
+        <option value="スライド資料作成">スライド資料作成</option>
+        <option value="企業ロゴ・ブランディング">企業ロゴ・ブランディング</option>
+        <option value="専用AIアシスタント制作">専用AIアシスタント制作</option>
+        <option value="チラシ・広告作成">チラシ・広告作成</option>
+        <option value="SNS用画像・AI画像生成">SNS用画像・AI画像生成</option>
+        <option value="AI秘書導入（AIエージェント）">AI秘書導入（AIエージェント）</option>
+        <option value="その他">その他</option>
+      </select>
+      <p class="error" role="alert">選択してください。</p>
+    </div>
+    <div class="field">
+      <label for="f-body">ご相談内容・ご要望</label>
+      <textarea id="f-body" name="body" placeholder="例：ホームページ制作をお願いしたいです。目的はお問い合わせ数の増加で、ターゲットに合わせた構成提案をお願いしたいです。"></textarea>
+    </div>
+    <button type="submit" class="submit">無料相談・お見積りを送信する →</button>
+    <p class="footnote">※送信ボタンを押すと、入力内容が入った状態でメールアプリが開きます。<br />そのまま送信してください。</p>
+  </form>
+
+  <p class="mail-note">フォームが使えない場合はメールでも：<a href="mailto:info@digital2026.net">info@digital2026.net</a></p>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 KOHYAMAデジタル総研 / 神山 裕貴</p>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById("estimate-form");
+  var to = "info@digital2026.net";
+  function clearErrors() {
+    form.querySelectorAll(".field.has-error").forEach(function (el) { el.classList.remove("has-error"); });
+  }
+  function showError(fieldName) {
+    var wrap = form.querySelector('.field[data-field="' + fieldName + '"]');
+    if (wrap) wrap.classList.add("has-error");
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    clearErrors();
+    var name = document.getElementById("f-name").value.trim();
+    var phone = document.getElementById("f-phone").value.trim();
+    var email = document.getElementById("f-email").value.trim();
+    var service = document.getElementById("f-service").value;
+    var body = document.getElementById("f-body").value.trim();
+    var ok = true;
+    if (!name) { showError("name"); ok = false; }
+    if (!phone) { showError("phone"); ok = false; }
+    if (!service) { showError("service"); ok = false; }
+    if (!ok) return;
+    var text =
+      "【無料相談・お見積りのご依頼】\r\n\r\n" +
+      "お名前: " + name + "\r\n" +
+      "お電話番号: " + phone + "\r\n" +
+      "メールアドレス: " + (email || "（未入力）") + "\r\n" +
+      "ご希望のサービス: " + service + "\r\n\r\n" +
+      "ご相談内容・ご要望:\r\n" + (body || "（なし）") + "\r\n";
+    var subject = encodeURIComponent("無料相談・お見積りのご依頼");
+    window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + encodeURIComponent(text);
+  });
+})();
+</script>
+</body>
+</html>
