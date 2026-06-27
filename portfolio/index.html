@@ -115,6 +115,7 @@ strong{font-weight:500}
 .card{display:flex;flex-direction:column}
 .card .mat{overflow:hidden}
 .card .mat img{transition:transform 1.6s cubic-bezier(.2,.6,.2,1)}
+.card .mat img.card-cover{width:100%;aspect-ratio:3/4;object-fit:cover}
 .card:hover .mat img{transform:scale(1.03)}
 .card-body{padding:1.6rem .4rem 0}
 .card-body .en-label{font-size:.66rem;letter-spacing:.4em}
@@ -122,6 +123,18 @@ strong{font-weight:500}
 .card-body p{font-size:.86rem;color:var(--muted);line-height:2.1}
 .card-link{display:inline-block;margin-top:1.3rem;font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:.2em;color:var(--gold-hi);text-decoration:none;border:1px solid var(--line);padding:.75rem 1.8rem;border-radius:1px;transition:background .5s,color .5s}
 .card-link:hover{background:var(--gold);color:#0c0903;border-color:var(--gold)}
+.card-detail{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line-soft)}
+.card-detail h4{font-family:var(--sans);font-weight:500;font-size:.82rem;letter-spacing:.14em;margin-bottom:.8rem;color:var(--text)}
+.card-checklist{list-style:none;font-size:.8rem;color:var(--muted);line-height:1.95}
+.card-checklist li{margin-bottom:.3rem}
+.card-note{font-size:.75rem;color:var(--muted);opacity:.85;margin-top:.5rem;line-height:1.85}
+.card-flow{list-style:none}
+.card-flow li{border-top:1px solid var(--line-soft);padding:.95rem 0;font-size:.8rem;color:var(--muted);line-height:1.95}
+.card-flow li:first-child{border-top:0;padding-top:0}
+.card-flow .flow-step{font-family:var(--en);font-size:.72rem;letter-spacing:.12em;color:var(--gold);display:block;margin-bottom:.35rem}
+.card-flow .flow-title{font-family:var(--serif);font-weight:600;font-size:.88rem;color:var(--text);letter-spacing:.06em;display:block;margin-bottom:.2rem}
+.mat-placeholder{width:100%;aspect-ratio:4/3;min-height:220px;background:#1a1a2e}
+
 .mid-cta{margin-top:4rem;text-align:center}
 .mid-cta p{color:var(--muted);font-size:.9rem;letter-spacing:.06em;margin-bottom:1.6rem}
 /* service */
@@ -312,7 +325,7 @@ main{position:relative;background:transparent}
       <div class="sec-head reveal">
         <span class="en-label">WORKS</span>
         <div class="orn"><i></i></div>
-        <h2 class="ja-title">MYデジタルコンテンツ</h2>
+        <h2 class="ja-title">クリエイティブ実績</h2>
         <p class="sec-lead">見た瞬間、スクロールの指が止まる。<br />「きれい」で終わらせない、<strong class="gold">成果に直結するクリエイティブ</strong>だけを作ります。</p>
       </div>
       <div class="cards">
@@ -347,6 +360,46 @@ main{position:relative;background:transparent}
             <span class="en-label">FLYER / AD</span>
             <h3>イベント・企業チラシ制作</h3>
             <p>実際のクライアント様からのご依頼で制作。印刷・Web両対応のチラシをAI×デザインツールで最短納品。集客導線まで考えたレイアウト設計を行います。</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="mat"><img src="IMG_2929.jpg" alt="AIチャットボット導入支援の紹介イラスト。美容室・飲食・整骨院・不動産・クリニックなど各業種での活用例" title="AIチャットボット制作・導入支援" width="900" height="1200" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <span class="en-label">CHATBOT / AI</span>
+            <h3>AIチャットボット制作・導入支援</h3>
+            <p>24時間365日、お客様の質問に自動で答えるAIチャットボットを、貴社サイトに1行のコードで導入できます。美容室・飲食・整骨院・不動産・クリニックなど、あらゆる業種に対応。よくある質問の自動化で、スタッフの対応工数を大幅に削減します。</p>
+            <div class="card-detail">
+              <h4>サービス内容</h4>
+              <ul class="card-checklist">
+                <li>✅ ヒアリング（業種・よくある質問収集）</li>
+                <li>✅ FAQ 20件までの設定<br />　　※21件目以降は1件につき+¥10,000（税別）で追加可能</li>
+                <li>✅ チャットボットのデザイン調整（色・文言）</li>
+                <li>✅ 動作確認・納品</li>
+                <li>✅ 導入後1ヶ月のメール質問対応</li>
+              </ul>
+              <p class="card-note">※別途、利用するAIツールの月額費用がかかります</p>
+            </div>
+            <a class="card-link" href="https://chatbot-donkun.netlify.app/" target="_blank" rel="noopener" title="AIチャットボット制作・導入支援">詳しく見る・無料相談</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="mat"><img class="card-cover" src="610EA371-68AC-47E5-92BA-FCF835D87A5E.png" alt="貴方の撮った一枚を感動のイラストに。AIイラスト制作サービス" title="個人向けAIイラストサービス" width="900" height="1200" loading="lazy" decoding="async" /></div>
+          <div class="card-body">
+            <span class="en-label">AI ILLUST / PERSONAL</span>
+            <h3>個人向けAIイラストサービス</h3>
+            <p>ペットや家族の写真をAIで世界にひとつのイラストに。SNSアイコン・LINEスタンプ・4コマ漫画・オリジナルロゴまで、気軽に頼める個人向けAIクリエイティブサービスです。プレゼントにも、自分用にも。まずはラフな相談から。</p>
+            <div class="card-detail">
+              <h4>サービス内容</h4>
+              <ul class="card-checklist">
+                <li>✅ AIイラスト生成（1枚 2,500円〜）</li>
+                <li>✅ アイコン・待ち受け作成（1点 5,000円）</li>
+                <li>✅ 4コマ漫画制作（1ページ 5,000円〜）</li>
+                <li>✅ オリジナルロゴ作成（15,000円）</li>
+                <li>✅ LINEスタンプ作成（8個〜 8,000円〜）</li>
+                <li>✅ チラシ・料金表作成（10,000円〜）</li>
+              </ul>
+            </div>
+            <a class="card-link" href="https://photo-art-gift.netlify.app/" target="_blank" rel="noopener" title="個人向けAIイラストサービス">作品を見る・相談する</a>
           </div>
         </article>
       </div>
