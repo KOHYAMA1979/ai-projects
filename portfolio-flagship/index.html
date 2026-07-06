@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOHYAMA | AI × WEB CREATIVE PORTFOLIO</title>
+<meta name="description" content="SNS画像・バナー・LP・ロゴ・キャラクター・Web制作まで。AI×デザインで「目に留まり、伝わる」ビジュアルをつくるKOHYAMAの作品集。">
+<meta property="og:title" content="KOHYAMA | AI × WEB CREATIVE PORTFOLIO">
+<meta property="og:description" content="つくったものが、信頼になる。SNS画像・LP・ロゴ・キャラクター・Web制作の制作実績。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 背景保証レイヤー（どの環境でも墨紺を維持） -->
+<div class="bgfill" aria-hidden="true"></div>
+<!-- 額装フレーム -->
+<div class="frame" aria-hidden="true">
+  <span class="fc fc-tl"></span><span class="fc fc-tr"></span>
+  <span class="fc fc-bl"></span><span class="fc fc-br"></span>
+</div>
+<!-- スクロール進捗（額装上辺が金に染まる） -->
+<div class="progress" id="progressBar" aria-hidden="true"></div>
+<!-- カスタムカーソル（PC・pointer:fineのみ） -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span>VIEW</span></div>
+<!-- カーソル追従プレビュー（PCのみ・クリック非干渉） -->
+<div class="hover-preview" id="hoverPreview" aria-hidden="true"><img src="" alt=""></div>
+
+<!-- ヘッダー -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top">KOHYAMA</a>
+  <nav class="gnav" id="gnav" aria-label="メインナビゲーション">
+    <a href="#works">WORKS</a>
+    <a href="#sites">WEB</a>
+    <a href="#service">SERVICE</a>
+    <a href="#profile">PROFILE</a>
+    <a href="#flow">FLOW</a>
+  </nav>
+  <a class="btn btn-header" href="#contact">依頼の相談をする</a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="sparkles" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="hero-inner">
+      <p class="eyebrow js-fadeup">PORTFOLIO</p>
+      <h1 id="hero-heading" class="hero-title js-fadeup">
+        <span class="nb">つくったものが、信頼になる。</span>
+      </h1>
+      <p class="hero-lead js-fadeup">
+        <span class="nb">SNS画像・バナーから、LP・ロゴ・</span><span class="nb">キャラクター・Web制作まで。</span><br>
+        <span class="nb">AI×デザインで「目に留まり、伝わる」</span><span class="nb">ビジュアルをつくっています。</span>
+      </p>
+      <div class="hero-cta js-fadeup">
+        <a class="btn btn-gold magnet" href="#works">作品を見る</a>
+        <a class="btn magnet" href="#contact">制作の相談をする</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span class="cue-label">SCROLL</span><span class="cue-line"></span></div>
+  </section>
+
+  <!-- ============ SHOWCASE REEL（シグネチャー） ============ -->
+  <section class="reel" aria-label="作品プレビュー">
+    <div class="reel-track" id="reelTrack">
+      <!-- JSで複製してループさせる -->
+      <figure><img src="images/work-banner-sora.jpg" alt="都市の空撮とタイポグラフィのキービジュアル「空の散歩」" loading="lazy"></figure>
+      <figure><img src="images/work-logo-ainail.jpg" alt="ネイルサロンの金箔押し風ロゴデザイン" loading="lazy"></figure>
+      <figure><img src="images/work-banner-facility.jpg" alt="設備メンテナンスの黒×金プロモーションバナー" loading="lazy"></figure>
+      <figure><img src="images/work-banner-government-extinguisher.png" alt="自治体向け消火器導入・更新のご提案チラシ" loading="lazy"></figure>
+      <figure><img src="images/work-logo-cleansmile.png" alt="CLEAN SMILE ロゴデザイン" loading="lazy"></figure>
+      <figure><img src="images/work-banner-ai-future.png" alt="各種サムネイル制作" loading="lazy"></figure>
+      <figure><img src="images/work-logo-kdi.jpg" alt="光とデータの山脈をモチーフにしたロゴビジュアル" loading="lazy"></figure>
+      <figure><img src="images/work-banner-fin.jpg" alt="フィン洗浄の匠 サービス訴求バナー" loading="lazy"></figure>
+      <figure><img src="images/work-banner-line-stamp.png" alt="各種料金表制作" loading="lazy"></figure>
+      <figure><img src="images/work-banner-photo-art.png" alt="写真を感動のイラストに 和風バナー" loading="lazy"></figure>
+      <figure><img src="images/work-banner-solar-filter.png" alt="ソーラー濾過システム チラシ" loading="lazy"></figure>
+      <figure><img src="images/work-sns-don.jpg" alt="X向けの情報告知バナー" loading="lazy"></figure>
+      <figure><img src="images/work-pixel-boy.jpg" alt="男の子のピクセルアートキャラクター" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- ============ WORKS ============ -->
+  <section id="works" class="section">
+    <div class="container">
+      <div class="sec-head js-reveal">
+        <p class="en-label">WORKS</p>
+        <h2 class="ja-title">制作実績</h2>
+        <div class="kazari" aria-hidden="true"><span class="k-line"></span><span class="k-dia"></span><span class="k-line"></span></div>
+        <p class="sec-lead"><span class="nb">クリックすると、制作の意図まで</span><span class="nb">ご覧いただけます。</span></p>
+      </div>
+
+      <div class="filter js-reveal" role="tablist" aria-label="作品カテゴリ">
+        <button class="f-btn is-active" data-filter="all">すべて</button>
+        <button class="f-btn" data-filter="banner">バナー・SNS</button>
+        <button class="f-btn" data-filter="web">Web・LP</button>
+        <button class="f-btn" data-filter="logo">ロゴ</button>
+        <button class="f-btn" data-filter="character">キャラクター</button>
+      </div>
+
+      <div class="works-grid" id="worksGrid">
+
+        <article class="work js-reveal" data-cat="web"
+          data-title="AINAIL ネイルサロン LP"
+          data-desc="愛知県西尾市のネイルサロン様向け公式LP。ダーク×パール×ゴールドの世界観で、コンセプト・メニュー・店内・Instagram連携・予約導線まで設計。ロゴ制作からWeb公開まで一貫対応したクライアント案件です。"
+          data-url="https://ainail-salon.netlify.app/">
+          <div class="work-mat"><img src="images/work-web-ainail.jpg" alt="AINAIL ネイルサロン LP" loading="lazy"></div>
+          <p class="work-cat">WEB / LP</p>
+          <h3 class="work-title">AINAIL ネイルサロン LP</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="キービジュアル「空の散歩」"
+          data-desc="都市の空撮写真に明朝タイポと金の曲線を重ねた、SNS向けキービジュアル。雑誌の表紙のような余韻を残す構図で、タイムラインで指が止まる一枚に仕上げました。">
+          <div class="work-mat"><img src="images/work-banner-sora.jpg" alt="キービジュアル 空の散歩" loading="lazy"></div>
+          <p class="work-cat">BANNER / SNS</p>
+          <h3 class="work-title">キービジュアル「空の散歩」</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="設備メンテナンス 訴求ビジュアル"
+          data-desc="実際の現場写真を活かした黒×金のプロモーションバナー。「安心を支える確かな技術」を軸に、強み4項目をアイコンで整理。信頼感と高級感を両立させた法人向けデザインです。">
+          <div class="work-mat"><img src="images/work-banner-facility.jpg" alt="設備メンテナンス訴求ビジュアル" loading="lazy"></div>
+          <p class="work-cat">BANNER / SNS</p>
+          <h3 class="work-title">設備メンテナンス 訴求ビジュアル</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="「フィン洗浄の匠」サービス告知"
+          data-desc="空調フィン洗浄の技術力を伝える一枚。銀×金の箔文字と現場写真の組み合わせで「職人の仕事」を演出。メダル型バッジで効果を3点に絞って訴求しています。">
+          <div class="work-mat"><img src="images/work-banner-fin.jpg" alt="フィン洗浄の匠 サービス告知バナー" loading="lazy"></div>
+          <p class="work-cat">BANNER / SNS</p>
+          <h3 class="work-title">「フィン洗浄の匠」サービス告知</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="自治体向け 消火器導入・更新チラシ"
+          data-desc="行政・自治体向けの消火器導入・更新提案チラシ。紺×金の信頼感ある配色で、お悩み→解決→導入メリットまで情報設計。B2G向けに「読みやすさ」と「権威性」を両立させた法人向けデザインです。">
+          <div class="work-mat"><img src="images/work-banner-government-extinguisher.png" alt="自治体向け消火器導入・更新チラシ" loading="lazy"></div>
+          <p class="work-cat">BANNER / FLYER</p>
+          <h3 class="work-title">自治体向け 消火器導入・更新チラシ</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="ソーラー濾過システム チラシ"
+          data-desc="停電時でも使えるソーラー濾過システムの訴求チラシ。製品写真と特許取得バッジで信頼性を強調し、災害時の給水確保・BCP対策という行政・法人向けニーズに訴求。問い合わせ導線まで設計した一枚です。">
+          <div class="work-mat"><img src="images/work-banner-solar-filter.png" alt="ソーラー濾過システム チラシ" loading="lazy"></div>
+          <p class="work-cat">BANNER / FLYER</p>
+          <h3 class="work-title">ソーラー濾過システム チラシ</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="各種料金表制作"
+          data-desc="LINEスタンプ・各種サービス向けの料金表・案内チラシ制作。基本料金・セットプラン・オプションを整理し、初めての方でも選びやすい情報設計に。ブランドカラーで統一し、問い合わせにつながる資料として仕上げています。">
+          <div class="work-mat"><img src="images/work-banner-line-stamp.png" alt="各種料金表制作" loading="lazy"></div>
+          <p class="work-cat">BANNER / FLYER</p>
+          <h3 class="work-title">各種料金表制作</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="各種サムネイル制作"
+          data-desc="YouTube・SNS・ビジネス向けなど、用途に合わせたサムネイル・キービジュアル制作。人物写真と金箔風タイポを組み合わせ、クリックしたくなる構図とメッセージ性を両立させた一枚です。">
+          <div class="work-mat"><img src="images/work-banner-ai-future.png" alt="各種サムネイル制作" loading="lazy"></div>
+          <p class="work-cat">BANNER / SNS</p>
+          <h3 class="work-title">各種サムネイル制作</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="写真を感動のイラストに 和風バナー"
+          data-desc="写真からイラスト作品を制作するサービスの訴求バナー。和風の背景・桜・金箔・墨の要素と、リアルな犬のイラストを組み合わせ、「一枚の写真を特別な記念品に」という世界観を表現しています。">
+          <div class="work-mat"><img src="images/work-banner-photo-art.png" alt="写真を感動のイラストに 和風バナー" loading="lazy"></div>
+          <p class="work-cat">BANNER / SNS</p>
+          <h3 class="work-title">写真を感動のイラストに</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="banner"
+          data-title="X向け 告知バナー（情報設計型）"
+          data-desc="キャンペーン告知用の情報量特盛タイプ。期間・対象・内容・保存訴求までを1枚に構成し、視線誘導と色のメリハリで「読める密度」に整理。エンゲージメント獲得を狙った設計です。">
+          <div class="work-mat"><img src="images/work-sns-don.jpg" alt="X向け告知バナー" loading="lazy"></div>
+          <p class="work-cat">BANNER / SNS</p>
+          <h3 class="work-title">X向け 告知バナー（情報設計型）</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="logo"
+          data-title="ネイルサロン ロゴデザイン"
+          data-desc="サロンの世界観に合わせたセリフ体×植物モチーフのロゴ。金の箔押し風モックアップまで制作し、名刺・看板・Webへの展開イメージを共有。ブランドの「顔」づくりの実例です。">
+          <div class="work-mat"><img src="images/work-logo-ainail.jpg" alt="ネイルサロンのロゴデザイン" loading="lazy"></div>
+          <p class="work-cat">LOGO / BRANDING</p>
+          <h3 class="work-title">ネイルサロン ロゴデザイン</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="logo"
+          data-title="CLEAN SMILE ロゴデザイン"
+          data-desc="清掃・クリーニングサービス「CLEAN SMILE」のロゴ。水の渦と笑顔を組み合わせたシンボルマークで、清潔感と親しみやすさを両立。名刺・ユニフォーム・Webサイトへの展開を見据えたブランドの顔づくりです。">
+          <div class="work-mat work-mat--light"><img src="images/work-logo-cleansmile.png" alt="CLEAN SMILE ロゴデザイン" loading="lazy"></div>
+          <p class="work-cat">LOGO / BRANDING</p>
+          <h3 class="work-title">CLEAN SMILE ロゴ</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="logo"
+          data-title="デジタルブランド ロゴビジュアル"
+          data-desc="光とデータの流れを山脈に見立てたロゴビジュアル。「積み上げる知見」と「先端技術」を一枚で象徴させ、Webサイト・資料・SNSアイコンまで展開できる汎用性を持たせました。">
+          <div class="work-mat"><img src="images/work-logo-kdi.jpg" alt="デジタルブランドのロゴビジュアル" loading="lazy"></div>
+          <p class="work-cat">LOGO / BRANDING</p>
+          <h3 class="work-title">デジタルブランド ロゴビジュアル</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="character"
+          data-title="ピクセルアート：男の子"
+          data-desc="ゲーム風の等身デフォルメで制作した人物キャラクター。ご本人の雰囲気を活かしつつ、アイコン・プロフィール画像・動画素材として使える汎用デザインです。">
+          <div class="work-mat work-mat--light"><img src="images/work-pixel-boy.jpg" alt="男の子のピクセルアート" loading="lazy"></div>
+          <p class="work-cat">CHARACTER</p>
+          <h3 class="work-title">ピクセルアート：男の子</h3>
+        </article>
+
+        <article class="work js-reveal" data-cat="character"
+          data-title="4コマ漫画制作"
+          data-desc="AIチャットボット導入サービスの説明用4コマ漫画。オリジナルキャラクター「DONクン」と相談者の掛け合いで、導入の不安（古いサイト・AIの誤回答・導入後サポート）を解消するストーリー設計。サービス理解と信頼醸成を目的に制作しました。">
+          <div class="work-mat work-mat--light"><img src="images/work-manga-donkun.png" alt="AIチャットボット導入サービス説明用4コマ漫画" loading="lazy"></div>
+          <p class="work-cat">MANGA / CHARACTER</p>
+          <h3 class="work-title">4コマ漫画制作</h3>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE SITES ============ -->
+  <section id="sites" class="section section-alt">
+    <div class="container">
+      <div class="sec-head js-reveal">
+        <p class="en-label">LP / LIVE</p>
+        <h2 class="ja-title">公開中のWebサイト</h2>
+        <div class="kazari" aria-hidden="true"><span class="k-line"></span><span class="k-dia"></span><span class="k-line"></span></div>
+        <p class="sec-lead"><span class="nb">デザインから実装・公開まで、</span><span class="nb">実際に動くサイトでご確認いただけます。</span></p>
+      </div>
+
+      <div class="sites-grid">
+        <a class="site-card js-reveal" href="https://ainail-salon.netlify.app/" target="_blank" rel="noopener" data-preview="images/work-web-ainail.jpg">
+          <div class="browser">
+            <span class="b-dots"><i></i><i></i><i></i></span>
+            <span class="b-url">ainail-salon.netlify.app</span>
+          </div>
+          <div class="site-body">
+            <p class="work-cat">LP / NAIL SALON</p>
+            <h3 class="work-title">AINAIL ネイルサロン 公式LP</h3>
+            <p class="site-desc">愛知県西尾市のネイルサロン様向けLP。ダーク×パール×ゴールドの世界観で、メニュー・店内・Instagram連携・予約導線まで設計。ロゴ・ブランディングからWeb公開まで一貫対応したクライアント案件です。</p>
+            <span class="site-link">サイトを見る</span>
+          </div>
+        </a>
+        <a class="site-card js-reveal" href="https://photo-art-gift.netlify.app" target="_blank" rel="noopener" data-preview="images/work-banner-photo-art.png">
+          <div class="browser">
+            <span class="b-dots"><i></i><i></i><i></i></span>
+            <span class="b-url">photo-art-gift.netlify.app</span>
+          </div>
+          <div class="site-body">
+            <p class="work-cat">LP / AI CHATBOT</p>
+            <h3 class="work-title">AIフォトアート ギフトサービス LP</h3>
+            <p class="site-desc">写真をイラスト作品に変えるギフトサービスのLP。デザイン・コピー・スマホ対応に加え、AIチャットボットによる自動応対まで実装。</p>
+            <span class="site-link">サイトを見る</span>
+          </div>
+        </a>
+        <a class="site-card js-reveal" href="https://chatbot-donkun.netlify.app" target="_blank" rel="noopener" data-preview="images/work-manga-donkun.png">
+          <div class="browser">
+            <span class="b-dots"><i></i><i></i><i></i></span>
+            <span class="b-url">chatbot-donkun.netlify.app</span>
+          </div>
+          <div class="site-body">
+            <p class="work-cat">LP / AI CHATBOT</p>
+            <h3 class="work-title">AIチャットボット 紹介サイト</h3>
+            <p class="site-desc">AIチャットボット導入サービスの紹介LP。実際にボットと会話できるデモを埋め込み、「触って伝わる」営業ページとして機能しています。</p>
+            <span class="site-link">サイトを見る</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 実績カウント（ページ掲載内容の実数のみ） -->
+      <div class="stats js-reveal" aria-label="実績サマリー">
+        <div class="stat"><p class="stat-v"><span class="cnt" data-count="15">0</span></p><p class="stat-l">掲載作品</p></div>
+        <div class="stat"><p class="stat-v"><span class="cnt" data-count="3">0</span></p><p class="stat-l">公開中のサイト</p></div>
+        <div class="stat"><p class="stat-v"><span class="cnt" data-count="6">0</span></p><p class="stat-l">対応領域</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE ============ -->
+  <section id="service" class="section">
+    <div class="container">
+      <div class="sec-head js-reveal">
+        <p class="en-label">SERVICE</p>
+        <h2 class="ja-title">できること</h2>
+        <div class="kazari" aria-hidden="true"><span class="k-line"></span><span class="k-dia"></span><span class="k-line"></span></div>
+        <p class="sec-lead"><span class="nb">企画からデザイン・実装・公開まで、</span><span class="nb">ワンストップで対応します。</span></p>
+      </div>
+
+      <div class="service-grid">
+        <div class="sv-card js-reveal">
+          <p class="sv-num">I</p>
+          <h3>SNS画像・バナー制作</h3>
+          <p>投稿用の挿絵・告知画像・キービジュアル。タイムラインで目に留まる一枚を、世界観に合わせて制作します。</p>
+        </div>
+        <div class="sv-card js-reveal">
+          <p class="sv-num">II</p>
+          <h3>LP・Webサイト制作</h3>
+          <p>デザイン・コピー・スマホ対応・公開作業までワンストップ。集客導線を考えた構成で「見せて終わり」にしません。</p>
+        </div>
+        <div class="sv-card js-reveal">
+          <p class="sv-num">III</p>
+          <h3>ロゴ・ブランドビジュアル</h3>
+          <p>サービスの世界観を一枚に凝縮するロゴと、その展開イメージ。名刺・看板・Webまで見据えてデザインします。</p>
+        </div>
+        <div class="sv-card js-reveal">
+          <p class="sv-num">IV</p>
+          <h3>キャラクター・AIイラスト</h3>
+          <p>ピクセルアート・アイコン・LINEスタンプなど。写真からのオーダーメイドで、世界にひとつのキャラクターを。</p>
+        </div>
+        <div class="sv-card js-reveal">
+          <p class="sv-num">V</p>
+          <h3>AI動画制作</h3>
+          <p>静止画のイラストやキャラクターをAIで動かし、リール・ショート向けの縦型動画に。静止画とのセット依頼も可能です。</p>
+        </div>
+        <div class="sv-card js-reveal">
+          <p class="sv-num">VI</p>
+          <h3>AIチャットボット導入</h3>
+          <p>サイトに埋め込む自動応対ボットを設計から実装まで。よくある質問の一次対応を自動化し、機会損失を減らします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFILE ============ -->
+  <section id="profile" class="section section-alt">
+    <div class="container container-narrow">
+      <div class="sec-head js-reveal">
+        <p class="en-label">PROFILE</p>
+        <h2 class="ja-title">製作者</h2>
+        <div class="kazari" aria-hidden="true"><span class="k-line"></span><span class="k-dia"></span><span class="k-line"></span></div>
+      </div>
+      <div class="profile-box js-reveal">
+        <p class="profile-name">KOHYAMA<span class="profile-role">AI × WEB CREATIVE</span></p>
+        <p class="profile-text">
+          AIツールを使い倒して、ビジュアルとWebをつくるクリエイター。
+          企画からデザイン・コーディング・公開までを一人で完結できるのが強みです。
+          納期と報連相を大切に、丁寧なやりとりで進めます。
+          東海エリアを拠点に、オンラインで全国対応。まずはラフなご相談からどうぞ。
+        </p>
+        <div class="tools js-reveal">
+          <p class="tools-label">MAIN TOOLS</p>
+          <ul class="tools-list">
+            <li>Claude</li><li>Claude Code</li><li>Gemini</li><li>Cursor</li>
+            <li>Canva</li><li>GitHub</li><li>Netlify</li><li>HTML / CSS / JS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLOW ============ -->
+  <section id="flow" class="section">
+    <div class="container container-narrow">
+      <div class="sec-head js-reveal">
+        <p class="en-label">FLOW</p>
+        <h2 class="ja-title">ご依頼から納品まで</h2>
+        <div class="kazari" aria-hidden="true"><span class="k-line"></span><span class="k-dia"></span><span class="k-line"></span></div>
+      </div>
+      <ol class="flow-list">
+        <li class="flow-item js-reveal">
+          <span class="flow-num">I</span>
+          <div><h3>ご相談</h3><p>メールまたはDMで、やりたいこと・イメージ・希望納期をお聞かせください。ふわっとした段階で大丈夫です。</p></div>
+        </li>
+        <li class="flow-item js-reveal">
+          <span class="flow-num">II</span>
+          <div><h3>ご提案・ラフ確認</h3><p>方向性のご提案とラフ案をご確認いただき、内容・進め方をすり合わせてから制作に入ります。</p></div>
+        </li>
+        <li class="flow-item js-reveal">
+          <span class="flow-num">III</span>
+          <div><h3>制作・修正</h3><p>制作物をご確認いただきながら仕上げていきます。修正のやりとりは丁寧に、が信条です。</p></div>
+        </li>
+        <li class="flow-item js-reveal">
+          <span class="flow-num">IV</span>
+          <div><h3>納品・公開サポート</h3><p>データ納品のほか、Webサイトは公開作業まで対応。納品後の軽微な調整もご相談ください。</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section section-contact">
+    <div class="container container-narrow">
+      <div class="sec-head js-reveal">
+        <p class="en-label">CONTACT</p>
+        <h2 class="ja-title">制作のご相談</h2>
+        <div class="kazari" aria-hidden="true"><span class="k-line"></span><span class="k-dia"></span><span class="k-line"></span></div>
+        <p class="sec-lead">
+          <span class="nb">「こんなの作れる？」の段階から</span><span class="nb">お気軽にどうぞ。</span><br>
+          <span class="nb">一営業日以内を目安に</span><span class="nb">お返事します。</span>
+        </p>
+      </div>
+      <div class="contact-actions js-reveal">
+        <a class="btn btn-gold btn-large magnet" href="mailto:info@digital2026.net?subject=%E5%88%B6%E4%BD%9C%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A%0A%E3%81%94%E5%B8%8C%E6%9C%9B%E7%B4%8D%E6%9C%9F%EF%BC%9A%0A%0A%E5%8F%82%E8%80%83%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%EF%BC%88%E3%81%82%E3%82%8C%E3%81%B0%EF%BC%89%EF%BC%9A">メールで相談する</a>
+        <p class="contact-mail">info@digital2026.net</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-brand">KOHYAMA</p>
+  <p class="footer-copy">&copy; 2026 KOHYAMA — AI &times; WEB CREATIVE</p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="作品の詳細">
+  <div class="lb-backdrop" data-lb-close></div>
+  <div class="lb-panel">
+    <button class="lb-close" data-lb-close aria-label="閉じる">&times;</button>
+    <div class="lb-media" id="lbMedia"></div>
+    <div class="lb-info">
+      <p class="work-cat" id="lbCat"></p>
+      <h3 class="lb-title" id="lbTitle"></h3>
+      <p class="lb-desc" id="lbDesc"></p>
+      <a class="lb-link" id="lbLink" target="_blank" rel="noopener" hidden>公開サイトを見る</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
