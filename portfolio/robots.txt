@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kohyama1979.github.io/ai-projects/portfolio/sitemap.xml
